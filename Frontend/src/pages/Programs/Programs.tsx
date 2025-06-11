@@ -121,7 +121,7 @@ export const Programs = (): JSX.Element => {
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Our
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent pb-3">
                 Programs
               </span>
             </h1>
