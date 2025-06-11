@@ -1,0 +1,1 @@
+export { EntryRequirementsSection } from "./EntryRequirementsSection";
