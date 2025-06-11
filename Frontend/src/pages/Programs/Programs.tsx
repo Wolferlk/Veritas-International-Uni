@@ -13,6 +13,7 @@ import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 
 const categories = ["All", "Business", "Technology", "Healthcare", "Creative"];
+const levels = ["All", "Diploma", "Bachelor’s", "Master", "Doctoral"];
 
 const programs = [
   {
@@ -20,92 +21,170 @@ const programs = [
     title: "Diploma in HR Management",
     category: "Business",
     duration: "6 Months",
-    level: "Professional",
+    level: "Diploma",
     students: "1,200+",
     rating: 4.9,
     price: "$1,299",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "Master human resource management with comprehensive training in recruitment, employee relations, and strategic HR planning.",
-    features: ["Industry Certification", "Career Support", "Flexible Schedule", "Expert Mentorship"],
+    image:
+      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Master human resource management with comprehensive training in recruitment, employee relations, and strategic HR planning.",
+    features: [
+      "Industry Certification",
+      "Career Support",
+      "Flexible Schedule",
+      "Expert Mentorship",
+    ],
   },
   {
     id: 2,
     title: "Business Administration",
     category: "Business",
     duration: "12 Months",
-    level: "Advanced",
+    level: "Bachelor’s",
     students: "2,500+",
     rating: 4.8,
     price: "$2,499",
-    image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "Comprehensive business education covering management, finance, marketing, and strategic planning.",
-    features: ["MBA Pathway", "Industry Projects", "Networking Events", "Global Recognition"],
+    image:
+      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Comprehensive business education covering management, finance, marketing, and strategic planning.",
+    features: [
+      "MBA Pathway",
+      "Industry Projects",
+      "Networking Events",
+      "Global Recognition",
+    ],
   },
   {
     id: 3,
     title: "Digital Marketing Mastery",
     category: "Technology",
     duration: "4 Months",
-    level: "Certificate",
+    level: "Diploma",
     students: "3,100+",
     rating: 4.9,
     price: "$899",
-    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "Learn cutting-edge digital marketing strategies including SEO, social media, and data analytics.",
-    features: ["Hands-on Projects", "Google Certified", "Live Campaigns", "Job Guarantee"],
+    image:
+      "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Learn cutting-edge digital marketing strategies including SEO, social media, and data analytics.",
+    features: [
+      "Hands-on Projects",
+      "Google Certified",
+      "Live Campaigns",
+      "Job Guarantee",
+    ],
   },
   {
     id: 4,
     title: "Healthcare Management",
     category: "Healthcare",
     duration: "8 Months",
-    level: "Professional",
+    level: "Master",
     students: "850+",
     rating: 4.7,
     price: "$1,799",
-    image: "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "Specialized program for healthcare professionals focusing on management and administration.",
-    features: ["Healthcare Focus", "Regulatory Training", "Leadership Skills", "Industry Connections"],
+    image:
+      "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Specialized program for healthcare professionals focusing on management and administration.",
+    features: [
+      "Healthcare Focus",
+      "Regulatory Training",
+      "Leadership Skills",
+      "Industry Connections",
+    ],
   },
   {
     id: 5,
     title: "Web Development Bootcamp",
     category: "Technology",
     duration: "6 Months",
-    level: "Intensive",
+    level: "Bachelor’s",
     students: "1,800+",
     rating: 4.8,
     price: "$1,599",
-    image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "Full-stack web development program covering modern frameworks and technologies.",
-    features: ["Portfolio Projects", "Tech Stack Training", "Job Placement", "Mentorship"],
+    image:
+      "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Full-stack web development program covering modern frameworks and technologies.",
+    features: [
+      "Portfolio Projects",
+      "Tech Stack Training",
+      "Job Placement",
+      "Mentorship",
+    ],
   },
   {
     id: 6,
     title: "Graphic Design Professional",
     category: "Creative",
     duration: "5 Months",
-    level: "Certificate",
+    level: "Diploma",
     students: "1,400+",
     rating: 4.6,
     price: "$1,199",
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "Creative design program covering branding, digital design, and visual communication.",
-    features: ["Creative Portfolio", "Industry Software", "Client Projects", "Design Thinking"],
+    image:
+      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Creative design program covering branding, digital design, and visual communication.",
+    features: [
+      "Creative Portfolio",
+      "Industry Software",
+      "Client Projects",
+      "Design Thinking",
+    ],
   },
+  {
+  id: 7,
+  title: "Doctorate in Data Science and AI",
+  category: "Technology",
+  duration: "36 Months",
+  level: "Doctoral",
+  students: "500+",
+  rating: 4.95,
+  price: "$6,999",
+  image:
+    "https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&w=600",
+  description:
+    "Advanced doctoral program focused on cutting-edge research in data science, machine learning, and artificial intelligence applications.",
+  features: [
+    "Research Publication Support",
+    "Dedicated Thesis Advisor",
+    "Access to AI Labs",
+    "Global Research Community",
+  ],
+}
 ];
 
 export const Programs = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedLevel, setSelectedLevel] = useState("All");
   const [filteredPrograms, setFilteredPrograms] = useState(programs);
+
+  const filterPrograms = (category: string, level: string) => {
+    let updated = programs;
+
+    if (category !== "All") {
+      updated = updated.filter((program) => program.category === category);
+    }
+
+    if (level !== "All") {
+      updated = updated.filter((program) => program.level === level);
+    }
+
+    setFilteredPrograms(updated);
+  };
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    if (category === "All") {
-      setFilteredPrograms(programs);
-    } else {
-      setFilteredPrograms(programs.filter(program => program.category === category));
-    }
+    filterPrograms(category, selectedLevel);
+  };
+
+  const handleLevelChange = (level: string) => {
+    setSelectedLevel(level);
+    filterPrograms(selectedCategory, level);
   };
 
   return (
@@ -139,7 +218,7 @@ export const Programs = (): JSX.Element => {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <div className="flex items-center space-x-2 text-gray-600">
               <FilterIcon className="w-5 h-5" />
-              <span className="font-medium">Filter by:</span>
+              <span className="font-medium">Filter by Category:</span>
             </div>
             {categories.map((category) => (
               <motion.button
@@ -157,6 +236,29 @@ export const Programs = (): JSX.Element => {
               </motion.button>
             ))}
           </div>
+
+          {/* Level Filter Section */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+            <div className="flex items-center space-x-2 text-gray-600">
+              <BookOpenIcon className="w-5 h-5" />
+              <span className="font-medium">Filter by Level:</span>
+            </div>
+            {levels.map((level) => (
+              <motion.button
+                key={level}
+                onClick={() => handleLevelChange(level)}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
+                  selectedLevel === level
+                    ? "bg-emerald-600 text-white shadow-lg"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {level}
+              </motion.button>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -165,7 +267,7 @@ export const Programs = (): JSX.Element => {
         <div className="container mx-auto px-6">
           <AnimatePresence mode="wait">
             <motion.div
-              key={selectedCategory}
+              key={`${selectedCategory}-${selectedLevel}`}
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -194,7 +296,7 @@ export const Programs = (): JSX.Element => {
                         {program.price}
                       </div>
                     </div>
-                    
+
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-sm text-teal-600 font-medium">
@@ -205,15 +307,15 @@ export const Programs = (): JSX.Element => {
                           <span className="text-sm font-medium">{program.rating}</span>
                         </div>
                       </div>
-                      
+
                       <h3 className="text-xl font-bold text-gray-900 mb-3">
                         {program.title}
                       </h3>
-                      
+
                       <p className="text-gray-600 mb-4 line-clamp-2">
                         {program.description}
                       </p>
-                      
+
                       <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
                         <div className="flex items-center space-x-1">
                           <ClockIcon className="w-4 h-4" />
@@ -224,7 +326,7 @@ export const Programs = (): JSX.Element => {
                           <span>{program.students}</span>
                         </div>
                       </div>
-                      
+
                       <div className="flex flex-wrap gap-2 mb-4">
                         {program.features.slice(0, 2).map((feature) => (
                           <span
@@ -235,10 +337,10 @@ export const Programs = (): JSX.Element => {
                           </span>
                         ))}
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <Link
-                          to={`/course/${program.title.toLowerCase().replace(/\s+/g, '-')}`}
+                          to={`/course/${program.title.toLowerCase().replace(/\s+/g, "-")}`}
                           className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
                         >
                           Learn More
