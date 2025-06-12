@@ -8,7 +8,8 @@ import { Register } from "./pages/Register/Register";
 import { Subsidiaries } from "./pages/Subsidiaries/Subsidiaries";
 import { StudentTestimonials } from "./pages/StudentTestimonials/StudentTestimonials";
 import { CourseDetails } from "./pages/CourseDetails/CourseDetails";
-import  CampusLife  from "./pages/CampusLife/CampusLife";
+import CampusLife from "./pages/CampusLife/CampusLife";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 export const App = (): JSX.Element => {
   return (
@@ -22,6 +23,7 @@ export const App = (): JSX.Element => {
         <Route path="/testimonials" element={<StudentTestimonials />} />
         <Route path="/course/:id" element={<CourseDetails />} />
         <Route path="/campus-life" element={<CampusLife />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </Layout>
   );
