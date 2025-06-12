@@ -38,9 +38,9 @@ const programs = [
   },
   {
     id: 2,
-    title: "Business Administration",
+    title: "BBA in Marketing Management",
     category: "Business",
-    duration: "12 Months",
+    duration: "48 Months",
     level: "Bachelor’s",
     students: "2,500+",
     rating: 4.8,
@@ -48,7 +48,7 @@ const programs = [
     image:
       "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
-      "Comprehensive business education covering management, finance, marketing, and strategic planning.",
+      "Drive brand success with creative and data-driven strategies.",
     features: [
       "MBA Pathway",
       "Industry Projects",
@@ -78,8 +78,8 @@ const programs = [
   },
   {
     id: 4,
-    title: "Healthcare Management",
-    category: "Healthcare",
+    title: "MBA in International Business management",
+    category: "Business",
     duration: "8 Months",
     level: "Master",
     students: "850+",
@@ -88,9 +88,9 @@ const programs = [
     image:
       "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
-      "Specialized program for healthcare professionals focusing on management and administration.",
+      "Lead across borders with global business acumen.",
     features: [
-      "Healthcare Focus",
+      "Business Focus",
       "Regulatory Training",
       "Leadership Skills",
       "Industry Connections",
@@ -98,9 +98,9 @@ const programs = [
   },
   {
     id: 5,
-    title: "Web Development Bootcamp",
+    title: "Bachelor of Systems Engineering Specializing in Information Technology",
     category: "Technology",
-    duration: "6 Months",
+    duration: "48 Months",
     level: "Bachelor’s",
     students: "1,800+",
     rating: 4.8,
@@ -108,7 +108,7 @@ const programs = [
     image:
       "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
-      "Full-stack web development program covering modern frameworks and technologies.",
+      "Build digital ecosystems that power tomorrow.",
     features: [
       "Portfolio Projects",
       "Tech Stack Training",
@@ -118,8 +118,8 @@ const programs = [
   },
   {
     id: 6,
-    title: "Graphic Design Professional",
-    category: "Creative",
+    title: "Diploma in Technology",
+    category: "Technology",
     duration: "5 Months",
     level: "Diploma",
     students: "1,400+",
@@ -130,16 +130,16 @@ const programs = [
     description:
       "Creative design program covering branding, digital design, and visual communication.",
     features: [
-      "Creative Portfolio",
+      "Hands-on Projects",
       "Industry Software",
-      "Client Projects",
-      "Design Thinking",
+      "Job Placement",
+      "Mentorship",
     ],
   },
   {
     id: 7,
-    title: "Doctorate in Data Science and AI",
-    category: "Technology",
+    title: "Doctor of Business Administration (DBA)",
+    category: "Business",
     duration: "36 Months",
     level: "Doctoral",
     students: "500+",
@@ -148,12 +148,12 @@ const programs = [
     image:
       "https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
-      "Advanced doctoral program focused on cutting-edge research in data science, machine learning, and artificial intelligence applications.",
+      " Lead with experience, research, and strategic insight in the world of business.",
     features: [
-      "Research Publication Support",
-      "Dedicated Thesis Advisor",
-      "Access to AI Labs",
-      "Global Research Community",
+      "Business Focus",
+      "Regulatory Training",
+      "Leadership Skills",
+      "Industry Connections",
     ],
   },
 ];
