@@ -137,25 +137,25 @@ const programs = [
     ],
   },
   {
-  id: 7,
-  title: "Doctorate in Data Science and AI",
-  category: "Technology",
-  duration: "36 Months",
-  level: "Doctoral",
-  students: "500+",
-  rating: 4.95,
-  price: "$6,999",
-  image:
-    "https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&w=600",
-  description:
-    "Advanced doctoral program focused on cutting-edge research in data science, machine learning, and artificial intelligence applications.",
-  features: [
-    "Research Publication Support",
-    "Dedicated Thesis Advisor",
-    "Access to AI Labs",
-    "Global Research Community",
-  ],
-}
+    id: 7,
+    title: "Doctorate in Data Science and AI",
+    category: "Technology",
+    duration: "36 Months",
+    level: "Doctoral",
+    students: "500+",
+    rating: 4.95,
+    price: "$6,999",
+    image:
+      "https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Advanced doctoral program focused on cutting-edge research in data science, machine learning, and artificial intelligence applications.",
+    features: [
+      "Research Publication Support",
+      "Dedicated Thesis Advisor",
+      "Access to AI Labs",
+      "Global Research Community",
+    ],
+  },
 ];
 
 export const Programs = (): JSX.Element => {
@@ -199,6 +199,54 @@ export const Programs = (): JSX.Element => {
 
   return (
     <div className="pt-20">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-600 text-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Shape Your Future With Veritas Education
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
+              Explore globally aligned diploma programs built to shape tomorrow’s leaders.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Academic Overview Section */}
+      <section className="py-16 bg-white text-center">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-4xl font-bold text-emerald-600 mb-6">
+            Academic Programs
+          </h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Veritas International Campus offers a wide array of academic
+            programs designed to suit various interests and career paths. Our
+            curriculum is both comprehensive and flexible, ensuring that each
+            student receives the necessary foundation to excel in their field.
+          </p>
+          <div className="text-gray-800 space-y-2 text-base">
+            <p>
+              Undergraduate Programs in Business, Marketing, Technology, and
+              more
+            </p>
+            <p>
+              Professional Diplomas in HR, Business Management, and Marketing
+            </p>
+            <p>
+              Workshops and Skill Development Programs focusing on real world
+              skills
+            </p>
+            <p>
+              Internships and Placement Opportunities to enhance career prospect
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-10">
@@ -274,20 +322,30 @@ export const Programs = (): JSX.Element => {
                               <span>{program.category}</span>
                               <span>⭐ {program.rating}</span>
                             </div>
-                            <h3 className="text-lg font-bold">{program.title}</h3>
-                            <p className="text-gray-600 text-sm">{program.description}</p>
+                            <h3 className="text-lg font-bold">
+                              {program.title}
+                            </h3>
+                            <p className="text-gray-600 text-sm">
+                              {program.description}
+                            </p>
                             <div className="text-sm text-gray-500 flex justify-between">
                               <span>{program.duration}</span>
                               <span>{program.students}</span>
                             </div>
                             <div className="flex items-center justify-between pt-2">
                               <Link
-                                to={`/course/${program.title.toLowerCase().replace(/\s+/g, "-")}`}
+                                to={`/course/${program.title
+                                  .toLowerCase()
+                                  .replace(/\s+/g, "-")}`}
                                 className="text-teal-600 text-sm flex items-center"
                               >
-                                Learn More <ArrowRightIcon className="ml-1 h-4 w-4" />
+                                Learn More{" "}
+                                <ArrowRightIcon className="ml-1 h-4 w-4" />
                               </Link>
-                              <Button size="sm" className="bg-teal-600 text-white hover:bg-teal-700">
+                              <Button
+                                size="sm"
+                                className="bg-teal-600 text-white hover:bg-teal-700"
+                              >
                                 Enroll
                               </Button>
                             </div>
@@ -300,7 +358,10 @@ export const Programs = (): JSX.Element => {
                   {/* Load More Button */}
                   {hasMoreToLoad && (
                     <div className="flex justify-center pt-6">
-                      <Button onClick={handleLoadMore} disabled={isLoadMoreLoading}>
+                      <Button
+                        onClick={handleLoadMore}
+                        disabled={isLoadMoreLoading}
+                      >
                         {isLoadMoreLoading ? (
                           <Loader2Icon className="animate-spin h-5 w-5 mr-2" />
                         ) : null}
