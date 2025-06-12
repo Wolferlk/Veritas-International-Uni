@@ -29,7 +29,12 @@ const programs = [
       "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Master human resource management with comprehensive training in recruitment, employee relations, and strategic HR planning.",
-    features: ["Industry Certification", "Career Support", "Flexible Schedule", "Expert Mentorship"],
+    features: [
+      "Industry Certification",
+      "Career Support",
+      "Flexible Schedule",
+      "Expert Mentorship",
+    ],
   },
   {
     id: 2,
@@ -44,7 +49,12 @@ const programs = [
       "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Comprehensive business education covering management, finance, marketing, and strategic planning.",
-    features: ["MBA Pathway", "Industry Projects", "Networking Events", "Global Recognition"],
+    features: [
+      "MBA Pathway",
+      "Industry Projects",
+      "Networking Events",
+      "Global Recognition",
+    ],
   },
   {
     id: 3,
@@ -59,7 +69,12 @@ const programs = [
       "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Learn cutting-edge digital marketing strategies including SEO, social media, and data analytics.",
-    features: ["Hands-on Projects", "Google Certified", "Live Campaigns", "Job Guarantee"],
+    features: [
+      "Hands-on Projects",
+      "Google Certified",
+      "Live Campaigns",
+      "Job Guarantee",
+    ],
   },
   {
     id: 4,
@@ -74,7 +89,12 @@ const programs = [
       "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Specialized program for healthcare professionals focusing on management and administration.",
-    features: ["Healthcare Focus", "Regulatory Training", "Leadership Skills", "Industry Connections"],
+    features: [
+      "Healthcare Focus",
+      "Regulatory Training",
+      "Leadership Skills",
+      "Industry Connections",
+    ],
   },
   {
     id: 5,
@@ -89,7 +109,12 @@ const programs = [
       "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Full-stack web development program covering modern frameworks and technologies.",
-    features: ["Portfolio Projects", "Tech Stack Training", "Job Placement", "Mentorship"],
+    features: [
+      "Portfolio Projects",
+      "Tech Stack Training",
+      "Job Placement",
+      "Mentorship",
+    ],
   },
   {
     id: 6,
@@ -104,7 +129,12 @@ const programs = [
       "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Creative design program covering branding, digital design, and visual communication.",
-    features: ["Creative Portfolio", "Industry Software", "Client Projects", "Design Thinking"],
+    features: [
+      "Creative Portfolio",
+      "Industry Software",
+      "Client Projects",
+      "Design Thinking",
+    ],
   },
   {
     id: 7,
@@ -119,7 +149,12 @@ const programs = [
       "https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&w=600",
     description:
       "Advanced doctoral program focused on cutting-edge research in data science, machine learning, and artificial intelligence applications.",
-    features: ["Research Publication Support", "Dedicated Thesis Advisor", "Access to AI Labs", "Global Research Community"],
+    features: [
+      "Research Publication Support",
+      "Dedicated Thesis Advisor",
+      "Access to AI Labs",
+      "Global Research Community",
+    ],
   },
 ];
 
@@ -171,6 +206,37 @@ export const Programs = (): JSX.Element => {
               and unlock your potential in today's competitive market.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Academic Overview Section */}
+      <section className="py-16 bg-white text-center">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <h2 className="text-4xl font-bold text-emerald-600 mb-6">
+            Academic Programs
+          </h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Veritas International Campus offers a wide array of academic
+            programs designed to suit various interests and career paths. Our
+            curriculum is both comprehensive and flexible, ensuring that each
+            student receives the necessary foundation to excel in their field.
+          </p>
+          <div className="text-gray-800 space-y-2 text-base">
+            <p>
+              Undergraduate Programs in Business, Marketing, Technology, and
+              more
+            </p>
+            <p>
+              Professional Diplomas in HR, Business Management, and Marketing
+            </p>
+            <p>
+              Workshops and Skill Development Programs focusing on real world
+              skills
+            </p>
+            <p>
+              Internships and Placement Opportunities to enhance career prospect
+            </p>
+          </div>
         </div>
       </section>
 
@@ -266,7 +332,9 @@ export const Programs = (): JSX.Element => {
                             </span>
                             <div className="flex items-center space-x-1">
                               <span className="text-yellow-400">★</span>
-                              <span className="text-sm font-medium">{program.rating}</span>
+                              <span className="text-sm font-medium">
+                                {program.rating}
+                              </span>
                             </div>
                           </div>
 
@@ -274,7 +342,9 @@ export const Programs = (): JSX.Element => {
                             {program.title}
                           </h3>
 
-                          <p className="text-gray-600 mb-3 line-clamp-2">{program.description}</p>
+                          <p className="text-gray-600 mb-3 line-clamp-2">
+                            {program.description}
+                          </p>
 
                           <div className="flex items-center justify-between mb-3 text-sm text-gray-500">
                             <div className="flex items-center space-x-1">
@@ -300,13 +370,18 @@ export const Programs = (): JSX.Element => {
 
                           <div className="flex items-center justify-between">
                             <Link
-                              to={`/course/${program.title.toLowerCase().replace(/\s+/g, "-")}`}
+                              to={`/course/${program.title
+                                .toLowerCase()
+                                .replace(/\s+/g, "-")}`}
                               className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
                             >
                               Learn More
                               <ArrowRightIcon className="ml-1 w-4 h-4" />
                             </Link>
-                            <Button className="bg-teal-600 hover:bg-teal-700 text-white" size="sm">
+                            <Button
+                              className="bg-teal-600 hover:bg-teal-700 text-white"
+                              size="sm"
+                            >
                               Enroll Now
                             </Button>
                           </div>
@@ -338,7 +413,10 @@ export const Programs = (): JSX.Element => {
               to your specific needs and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl" size="lg">
+              <Button
+                className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
+                size="lg"
+              >
                 Contact Us
               </Button>
               <Button
