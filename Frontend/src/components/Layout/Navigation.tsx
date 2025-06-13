@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
+import logo from "../../assests/images/logo.png";
 
 const navigationItems = [
   { name: "Home", href: "/" },
@@ -31,7 +32,7 @@ export const Navigation = (): JSX.Element => {
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("mousemove", handleMouseMove);
-    
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
@@ -92,37 +93,28 @@ export const Navigation = (): JSX.Element => {
                 whileHover={{ rotate: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                {/* Animated gradient background */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600"
-                  animate={{
-                    background: [
-                      "linear-gradient(135deg, #8b5cf6, #a855f7, #c026d3)",
-                      "linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6)",
-                      "linear-gradient(135deg, #10b981, #06b6d4, #3b82f6)",
-                      "linear-gradient(135deg, #8b5cf6, #a855f7, #c026d3)",
-                    ],
-                  }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                />
-                <div className="absolute inset-0 bg-black/10" />
+                <div className="absolute inset-0" />
                 <div className="relative flex items-center justify-center h-full">
-                  <motion.span
-                    className="text-white font-bold text-2xl"
+                  <motion.img
+                    src={logo}
+                    alt="Logo"
+                    className="object-contain"
                     whileHover={{ scale: 1.1 }}
-                  >
-                    V
-                  </motion.span>
+                  />
                   <motion.div
                     className="absolute -top-1 -right-1"
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                   >
                     <Sparkles className="w-3 h-3 text-yellow-300" />
                   </motion.div>
                 </div>
               </motion.div>
-              
+
               <div className="group-hover:translate-x-1 transition-transform duration-300">
                 <motion.h1
                   className="text-2xl font-bold bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent"
@@ -158,18 +150,18 @@ export const Navigation = (): JSX.Element => {
                     className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-full group-hover:scale-105 ${
                       location.pathname === item.href
                         ? "text-white bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg shadow-purple-500/25"
-                        : "text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:backdrop-blur-sm"
+                        : "text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-900/25 hover:to-pink-900/25 hover:backdrop-blur-lg"
                     }`}
                   >
                     <span className="relative z-10">{item.name}</span>
-                    
+
                     {/* Hover effect background */}
                     <motion.div
                       className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm opacity-0 group-hover:opacity-100"
                       initial={false}
                       transition={{ duration: 0.2 }}
                     />
-                    
+
                     {/* Active indicator */}
                     {location.pathname === item.href && (
                       <motion.div
@@ -177,7 +169,11 @@ export const Navigation = (): JSX.Element => {
                         layoutId="activeIndicator"
                         initial={false}
                         style={{ x: "-50%" }}
-                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
+                        }}
                       />
                     )}
                   </Link>
@@ -192,6 +188,7 @@ export const Navigation = (): JSX.Element => {
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
+                <Link to="/register">
                 <Button className="relative group bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 text-white px-8 py-3 rounded-full font-semibold shadow-xl shadow-teal-500/25 border border-white/20 overflow-hidden">
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100"
@@ -206,13 +203,14 @@ export const Navigation = (): JSX.Element => {
                       <ArrowRight className="w-4 h-4" />
                     </motion.div>
                   </span>
-                  
+
                   {/* Shimmer effect */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full"
                     transition={{ duration: 0.6 }}
                   />
                 </Button>
+                </Link>
               </motion.div>
             </div>
 
@@ -248,7 +246,6 @@ export const Navigation = (): JSX.Element => {
               </AnimatePresence>
             </motion.button>
           </div>
-
           {/* Enhanced Mobile Menu */}
           <AnimatePresence>
             {isMobileMenuOpen && (
@@ -278,7 +275,7 @@ export const Navigation = (): JSX.Element => {
                           className={`px-4 py-3 text-sm font-semibold rounded-2xl transition-all duration-300 flex items-center justify-between group ${
                             location.pathname === item.href
                               ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25"
-                              : "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-gray-900"
+                              : "text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-900/25 hover:to-pink-900/25 hover:backdrop-blur-lg"
                           }`}
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
@@ -292,17 +289,19 @@ export const Navigation = (): JSX.Element => {
                         </Link>
                       </motion.div>
                     ))}
-                    
+
                     <motion.div
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: navigationItems.length * 0.1 }}
                       className="pt-4"
                     >
-                      <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-2xl font-semibold shadow-lg flex items-center justify-center space-x-2">
-                        <span>Apply Now</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Button>
+                      <Link to="/register">
+                        <Button className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-3 rounded-2xl font-semibold shadow-lg flex items-center justify-center space-x-2">
+                          <span>Apply Now</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </Button>
+                      </Link>
                     </motion.div>
                   </nav>
                 </motion.div>
