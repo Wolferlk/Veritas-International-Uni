@@ -10,6 +10,7 @@ import { StudentTestimonials } from "./pages/StudentTestimonials/StudentTestimon
 import { CourseDetails } from "./pages/CourseDetails/CourseDetails";
 import CampusLife from "./pages/CampusLife/CampusLife";
 import Partners from "./pages/Partners/Partners";
+import OurTeam from "./pages/Team/OurTeam";
 
 export const App = (): JSX.Element => {
   return (
@@ -24,6 +25,7 @@ export const App = (): JSX.Element => {
         <Route path="/course/:id" element={<CourseDetails />} />
         <Route path="/campus-life" element={<CampusLife />} />
         <Route path="/partners" element={<Partners />} />
+        <Route path="/team" element={<OurTeam />} />
       </Routes>
     </Layout>
   );
