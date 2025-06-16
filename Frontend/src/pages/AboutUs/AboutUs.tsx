@@ -77,7 +77,7 @@ const SlideInRight: React.FC<AnimationProps> = ({
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen pt-20">
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-800 overflow-hidden">
         {/* Animated Background Elements */}
@@ -103,12 +103,6 @@ const AboutUs: React.FC = () => {
                 Empowering minds, shaping futures through innovative education
                 and global excellence
               </p>
-              <a
-                href="#contact"
-                className="inline-block bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 hover:transform hover:scale-105 backdrop-filter backdrop-blur-lg border border-white border-opacity-30"
-              >
-                Contact Us
-              </a>
             </FadeInUp>
           </div>
         </div>
@@ -149,14 +143,15 @@ const AboutUs: React.FC = () => {
                     </h2>
                   </div>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    At Veritas International Campus, our mission is to create a
-                    space where education is more than just learning. It's about
-                    moving the leaders of tomorrow who are ready to make a
-                    global impact. Our journey started in 2008 with a commitment
-                    to providing quality education that empowers individuals not
-                    only academically but personally as well. We focus on
-                    building character, fostering creativity, and nurturing the
-                    skills necessary to thrive in our future workforce.
+                    “At Veritas International Campus, our mission is to create a
+                    space where education is more than just learning; it’s about
+                    molding the leaders of tomorrow who are ready to make a
+                    global impact. Our journey started in 2024, with a
+                    commitment to providing holistic education that empowers
+                    individuals not only academically but personally as well. We
+                    focus on building character, fostering creativity, and
+                    encouraging innovation in every student that walks through
+                    our doors.”
                   </p>
                   <div className="border-l-4 border-green-400 pl-4">
                     <p className="text-gray-700 font-medium italic">
@@ -164,7 +159,7 @@ const AboutUs: React.FC = () => {
                       to change the world."
                     </p>
                     <p className="text-green-600 font-semibold mt-2">
-                      - Mr. Manjula Gamage (Founder)
+                      - Mr. Harshana Gamage (Founder)
                     </p>
                   </div>
                 </div>
@@ -242,11 +237,13 @@ const AboutUs: React.FC = () => {
                   Our Vision
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-center">
-                  Veritas International Campus offers a premium quality of
-                  education with excellent service focused on global development
-                  and comes with. Our Vision is to become an internationally
-                  recognized center of excellence that inspires lifelong
-                  learning and personal growth.
+                  Veritas International Campus offers a wide array of academic
+                  programs designed to suit various interests and career paths.
+                  Our curriculum is both comprehensive and flexible, ensuring
+                  that each student receives the necessary foundation to excel
+                  in their field.To become a global center of academic
+                  excellence, cultivating innovative minds that drive change and
+                  contribute meaningfully to society.
                 </p>
               </div>
             </SlideInLeft>
@@ -272,10 +269,10 @@ const AboutUs: React.FC = () => {
                   Our Mission
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-center">
-                  We strive to deliver transformative educational experiences
-                  that make lifelong learning, independent and ethical actions
-                  and an engagement with community responsibilities. Our mission
-                  continues.
+                  provide a transformative educational experience that empowers
+                  students to realize their full potential, prepares them for
+                  professional success, and instills values of integrity,
+                  responsibility, and compassion
                 </p>
               </div>
             </SlideInRight>
