@@ -11,6 +11,7 @@ import { CourseDetails } from "./pages/CourseDetails/CourseDetails";
 import CampusLife from "./pages/CampusLife/CampusLife";
 import Partners from "./pages/Partners/Partners";
 import OurTeam from "./pages/Team/OurTeam";
+import OurStores from "./pages/Store/OurStores";
 
 export const App = (): JSX.Element => {
   return (
@@ -26,6 +27,7 @@ export const App = (): JSX.Element => {
         <Route path="/campus-life" element={<CampusLife />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/team" element={<OurTeam />} />
+        <Route path="/store" element={<OurStores />} />
       </Routes>
     </Layout>
   );
