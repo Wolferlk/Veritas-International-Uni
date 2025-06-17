@@ -1,4 +1,12 @@
 import React, { useState, useEffect } from "react";
+import partner1 from "../../assests/images/partner1.png";
+import partner2 from "../../assests/images/partner2.png";
+import partner3 from "../../assests/images/partner3.png";
+import partner4 from "../../assests/images/partner4.png";
+import partner5 from "../../assests/images/partner5.png";
+import partner6 from "../../assests/images/partner6.png";
+import partner7 from "../../assests/images/partner7.png";
+import partner8 from "../../assests/images/partner8.png";
 
 interface AnimationProps {
   children: React.ReactNode;
@@ -76,6 +84,16 @@ const SlideInRight: React.FC<AnimationProps> = ({
 };
 
 const AboutUs: React.FC = () => {
+  const partners = [
+    { id: 1, image: partner1, name: "Partner 1" },
+    { id: 2, image: partner2, name: "Partner 2" },
+    { id: 3, image: partner3, name: "Partner 3" },
+    { id: 4, image: partner4, name: "Partner 4" },
+    { id: 4, image: partner5, name: "Partner 5" },
+    { id: 4, image: partner6, name: "Partner 6" },
+    { id: 4, image: partner7, name: "Partner 7" },
+    { id: 4, image: partner8, name: "Partner 8" },
+  ];
   return (
     <div className="bg-gray-50 min-h-screen pt-20">
       {/* Hero Section */}
@@ -295,27 +313,19 @@ const AboutUs: React.FC = () => {
           </FadeInUp>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((item, index) => (
-              <FadeInUp key={item} delay={200 + index * 100}>
+            {partners.map((partner, index) => (
+              <FadeInUp key={partner.id} delay={200 + index * 100}>
                 <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-2 border border-gray-100 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      ></path>
-                    </svg>
+                  <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <img
+                      src={partner.image}
+                      alt={partner.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
-                  <h4 className="font-bold text-center text-gray-800 group-hover:text-purple-600 transition-colors duration-300">
-                    Partner {item}
-                  </h4>
+                  {/* <h4 className="font-bold text-center text-gray-800 group-hover:text-purple-600 transition-colors duration-300">
+                    {partner.name}
+                  </h4> */}
                 </div>
               </FadeInUp>
             ))}
