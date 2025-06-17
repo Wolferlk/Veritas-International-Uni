@@ -27,8 +27,18 @@ const ContactPage: React.FC = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init("69XOTuNay4qIML5AT"); // Replace with your public key
+    emailjs.init("69XOTuNay4qIML5AT");
   }, []);
+
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus("");
+      }, 3000); // Message will disappear after 3 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,10 +47,10 @@ const ContactPage: React.FC = () => {
 
     try {
       const result = await emailjs.sendForm(
-        "service_p73kqsr", // Replace with your service ID
-        "template_jx0yyze", // Replace with your template ID
+        "service_p73kqsr",
+        "template_jx0yyze",
         form.current,
-        "69XOTuNay4qIML5AT" // Replace with your public key
+        "69XOTuNay4qIML5AT"
       );
 
       if (result.text === "OK") {
@@ -387,7 +397,7 @@ const ContactPage: React.FC = () => {
 
                     {status && (
                       <div
-                        className={`mt-4 p-3 rounded-lg ${
+                        className={`mt-4 p-3 rounded-lg transition-opacity duration-500 ${
                           status.includes("success")
                             ? "bg-green-50 text-green-600 border border-green-200"
                             : "bg-red-50 text-red-600 border border-red-200"
@@ -401,36 +411,6 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* CTA Section
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-green-600 rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
-            <div className="relative backdrop-blur-sm bg-white/80 rounded-3xl shadow-2xl p-12 border border-white/20 hover:shadow-3xl transition-all duration-500">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-emerald-100 to-green-100 rounded-full mb-8 shadow-lg">
-                  <Mail className="w-10 h-10 text-emerald-600" />
-                </div>
-                <h3 className="text-3xl font-bold mb-6 text-gray-800">
-                  Ready to Get Started?
-                </h3>
-                <p className="text-gray-600 mb-10 max-w-lg mx-auto text-lg leading-relaxed">
-                  Ready to get in touch? Click the button below to send us an
-                  email directly and let's begin this journey together.
-                </p>
-                <a
-                  href="mailto:info.veritascampus@gmail.com"
-                  className="inline-flex items-center space-x-4 bg-teal-600 hover:bg-teal-700 text-white px-10 py-5 rounded-2xl transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 active:scale-95 group"
-                >
-                  <Mail className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                  <span>Send Email</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </a>
-                <p className="text-sm text-gray-500 mt-6 font-medium">
-                  info.veritascampus@gmail.com
-                </p>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
