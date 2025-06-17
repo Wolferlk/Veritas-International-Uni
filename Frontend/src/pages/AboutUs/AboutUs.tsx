@@ -89,10 +89,10 @@ const AboutUs: React.FC = () => {
     { id: 2, image: partner2, name: "Partner 2" },
     { id: 3, image: partner3, name: "Partner 3" },
     { id: 4, image: partner4, name: "Partner 4" },
-    { id: 4, image: partner5, name: "Partner 5" },
-    { id: 4, image: partner6, name: "Partner 6" },
-    { id: 4, image: partner7, name: "Partner 7" },
-    { id: 4, image: partner8, name: "Partner 8" },
+    { id: 5, image: partner5, name: "Partner 5" },
+    { id: 6, image: partner6, name: "Partner 6" },
+    { id: 7, image: partner7, name: "Partner 7" },
+    { id: 8, image: partner8, name: "Partner 8" },
   ];
   return (
     <div className="bg-gray-50 min-h-screen pt-20">
