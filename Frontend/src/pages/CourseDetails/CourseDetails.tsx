@@ -18,21 +18,19 @@ import { Card, CardContent } from "../../components/ui/card";
 const courseData = {
   "diploma-in-hr-management": {
     title: "Diploma in HR Management",
-    subtitle: "Master Human Resources with Industry-Leading Curriculum",
+    subtitle: "Master the fundamentals of Human Resources with our comprehensive 6-month professional diploma program designed for career advancement.",
     duration: "6 Months",
-    level: "Professional",
+    level: "Certified Program",
     price: "$1,299",
     rating: 4.9,
     students: "1,200+",
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
-    description: "Transform your career with our comprehensive HR Management diploma. Learn from industry experts and gain practical skills in recruitment, employee relations, performance management, and strategic HR planning.",
+    description: "Our Diploma in HR Management is designed to provide you with comprehensive knowledge and practical skills in human resource management. This program covers all essential areas of HR including recruitment, employee relations, performance management, and strategic HR planning.",
     features: [
-      "100% Online Learning",
-      "Industry Certification",
-      "Career Support",
-      "Flexible Schedule",
-      "Expert Mentorship",
-      "Real-world Projects"
+      "Learn from industry experts with real-world experience",
+      "Gain practical skills through case studies and projects",
+      "Build a strong foundation for HR career advancement",
+      "Access to exclusive HR resources and networking opportunities",
     ],
     curriculum: [
       {
@@ -75,9 +73,9 @@ const courseData = {
     outcomes: [
       "HR Assistant",
       "HR Executive",
-      "Recruitment Specialist",
-      "Training Coordinator",
-      "HR Manager"
+      "Human Resources Manager",
+      "Talent Acquisition Specialist",
+      "Training and Development Specialist"
     ]
   }
 };
@@ -128,15 +126,7 @@ export const CourseDetails = (): JSX.Element => {
                   size="lg"
                   className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
                 >
-                  Enroll Now - {course.price}
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold rounded-full"
-                >
-                  <PlayIcon className="w-5 h-5 mr-2" />
-                  Watch Preview
+                  Apply Now
                 </Button>
               </div>
             </motion.div>
@@ -146,21 +136,14 @@ export const CourseDetails = (): JSX.Element => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Card className="overflow-hidden shadow-2xl border-0">
+              <Card className="overflow-hidden shadow-2xl border-0 ">
                 <div className="relative">
                   <img
                     src={course.image}
                     alt={course.title}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <Button
-                      size="lg"
-                      className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full w-16 h-16 p-0"
-                    >
-                      <PlayIcon className="w-8 h-8" />
-                    </Button>
-                  </div>
+                  <div className="absolute inset-0 bg-black/30" />
                 </div>
                 <CardContent className="p-6 bg-white">
                   <div className="text-center">
@@ -171,7 +154,7 @@ export const CourseDetails = (): JSX.Element => {
                       Professional Certificate
                     </h3>
                     <p className="text-gray-600">
-                      Earn a recognized diploma that enhances your career prospects
+                      Earn a recognized diploma that enhances your career prospects in HR
                     </p>
                   </div>
                 </CardContent>
@@ -199,7 +182,7 @@ export const CourseDetails = (): JSX.Element => {
                   {course.description}
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="grid md:grid gap-6 mb-8">
                   {course.features.map((feature, index) => (
                     <div key={index} className="flex items-center space-x-3">
                       <CheckCircleIcon className="w-5 h-5 text-teal-600 flex-shrink-0" />
@@ -318,9 +301,6 @@ export const CourseDetails = (): JSX.Element => {
                     >
                       Enroll Now
                     </Button>
-                    <p className="text-xs text-white/70 mt-3">
-                      30-day money-back guarantee
-                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
