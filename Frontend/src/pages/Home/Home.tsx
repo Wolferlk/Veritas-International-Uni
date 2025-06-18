@@ -1,77 +1,53 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import {
-  GraduationCapIcon,
-  UsersIcon,
-  AwardIcon,
-  BookOpenIcon,
-  Sparkles,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  SparklesIcon,
-  StarIcon,
+  GlobeIcon,
+  LightbulbIcon,
+  CalendarIcon,
+  GraduationCap,
+  School,
+  Briefcase,
 } from "lucide-react";
 import { Button } from "../../components/ui/button";
-import { Card, CardContent } from "../../components/ui/card";
-
-const stats = [
-  { number: "5000+", label: "Students Graduated", icon: GraduationCapIcon },
-  { number: "50+", label: "Expert Faculty", icon: UsersIcon },
-  { number: "25+", label: "Programs Offered", icon: BookOpenIcon },
-  { number: "98%", label: "Success Rate", icon: AwardIcon },
-];
-
-const features = [
-  {
-    title: "World-Class Education",
-    description: "Learn from industry experts with cutting-edge curriculum",
-    icon: BookOpenIcon,
-  },
-  {
-    title: "Flexible Learning",
-    description: "Online and hybrid programs that fit your schedule",
-    icon: UsersIcon,
-  },
-  {
-    title: "Career Support",
-    description: "Dedicated placement assistance and career guidance",
-    icon: AwardIcon,
-  },
-];
-
-const programs = [
-  {
-    title: "Diploma in HR Management",
-    duration: "6 Months",
-    level: "Professional",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
-  },
-  {
-    title: "Business Administration",
-    duration: "12 Months",
-    level: "Advanced",
-    image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400",
-  },
-  {
-    title: "Digital Marketing",
-    duration: "4 Months",
-    level: "Certificate",
-    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400",
-  },
-];
 
 export const Home = (): JSX.Element => {
+  const stats = [
+    {
+      title: "2024",
+      subtitle: "Founded",
+      icon: <CalendarIcon size={32} className="text-green-400 mb-2" />,
+    },
+    {
+      title: "100%",
+      subtitle: "Innovation Focus",
+      icon: <LightbulbIcon size={32} className="text-green-400 mb-2" />,
+    },
+    {
+      title: "Global",
+      subtitle: "Perspective",
+      icon: <GlobeIcon size={32} className="text-green-400 mb-2" />,
+    },
+  ];
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-600">
-        <div className="absolute inset-0 bg-black/20" />
+      <section
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://www.gcc.edu/Portals/0/Images/1.3.2-campus_life-body-3-0723.jpg?ver=e2CLlzBj5mDL04ofjiiCGw%3D%3D')",
+        }}
+      >
+        {/* Green Tint Overlay */}
+        <div className="absolute inset-0 bg-emerald-800/30" />
+
+        {/* Blurred Circle Decorations */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-300/10 rounded-full blur-3xl animate-pulse delay-1000" />
         </div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center">
             <motion.h1
@@ -80,241 +56,303 @@ export const Home = (): JSX.Element => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Shape Your
+              Veritas International
               <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                Future Today
+                Campus
               </span>
             </motion.h1>
-            
+
             <motion.p
-              className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto"
+              className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Join thousands of students who have transformed their careers with our
-              world-class education programs and expert guidance.
+              Shaping Tomorrow's Leaders Today through academic excellence,
+              innovation, and real-world relevance
             </motion.p>
-            
+
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              initial={{ opacity: 0, y: 30 }}
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
               <Button
                 size="lg"
                 className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
               >
-                Explore Programs
-                <ArrowRightIcon className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold rounded-full"
-              >
                 Apply Now
               </Button>
             </motion.div>
-          </div>
-        </div>
-        
-        <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2" />
-          </div>
-        </motion.div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose Veritas?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide exceptional education with a focus on practical skills
-              and career advancement.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                  <CardContent className="p-8 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <feature.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Programs Preview */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Popular Programs
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our most sought-after programs designed to accelerate your career.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {programs.map((program, index) => (
-              <motion.div
-                key={program.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-              >
-                <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 shadow-lg">
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={program.image}
-                      alt={program.title}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                    />
-                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-900">
-                      {program.level}
-                    </div>
+            <div className="flex flex-col sm:flex-row gap-14 justify-center items-center">
+              {stats.map((stat, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 + idx * 0.2 }}
+                  className="text-center"
+                >
+                  <div className="flex justify-center">{stat.icon}</div>
+                  <div className="text-4xl font-bold text-green-400">
+                    {stat.title}
                   </div>
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {program.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">{program.duration}</p>
-                    <Link
-                      to={`/course/${program.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium"
-                    >
-                      Learn More
-                      <ArrowRightIcon className="ml-1 w-4 h-4" />
-                    </Link>
-                  </CardContent>
-                </Card>
+                  <div className="text-lg text-white tracking-wide">
+                    {stat.subtitle}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Welcome Section */}
+      <motion.section
+        className="py-20 bg-gray-50"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-teal-700 mb-6 text-center">
+            Welcome to Veritas International Campus
+          </h2>
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+                Veritas International Campus, as a bold and passionate start-up
+                in the field of higher education, we are driven by a singular
+                mission: to shape future-ready individuals through academic
+                excellence, innovation, and real-world relevance.
+              </p>
+              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+                Founded with a deep belief in the power of education to unlock
+                human potential, Veritas International Campus is going to offer
+                a range of academic programs designed to equip students with the
+                knowledge, skills, and global perspective they need to thrive in
+                a rapidly evolving world. Even being a start up, our programs
+                are built not only to meet the standards of today’s educational
+                landscape but to anticipate the demands of tomorrow’s
+                industries.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                As a young and evolving institution, we embrace the agility,
+                creativity, and courage that define start-ups. We are not bound
+                by convention — we are inspired by possibility. Every course,
+                every collaboration, and every initiative at Veritas is crafted
+                with purpose, with a commitment to pushing boundaries and
+                nurturing minds that dare to think differently.
+              </p>
+            </div>
+            <motion.div
+              className="relative"
+              initial={{ scale: 0.9, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <img
+                src="src/assests/images/lec_room.jpg"
+                alt="Classroom"
+                className="rounded-xl shadow-lg w-full h-[400px] object-cover"
+              />
+              <div className="absolute bottom-4 left-4 bg-emerald-600 text-white text-sm px-4 py-2 rounded-full shadow-lg font-semibold">
+                2024 Founded
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Company History Section */}
+      <motion.section
+        className="py-20 bg-gray-50"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-teal-700 mb-4">
+            Company History
+          </h2>
+          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+            Our journey began with a vision to revolutionize higher education
+            through innovation and excellence.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Founded",
+                desc: "Veritas was established in 2024",
+                icon: "🎓",
+              },
+              {
+                title: "Focus",
+                desc: "Empower Learning, Inspire Growth",
+                icon: "🎯",
+              },
+              {
+                title: "Headquarters",
+                desc: "Located in Panadura",
+                icon: "📍",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl mb-3">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600">{item.desc}</p>
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <Link to="/programs">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                View All Programs
-                <ArrowRightIcon className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-emerald-600">
+      {/* Target Market Section */}
+      <motion.section
+        className="py-20 bg-white"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <div className="container mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Start Your Journey?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of successful graduates who have transformed their careers
-              with our comprehensive programs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
+          <h2 className="text-4xl font-bold text-teal-700 mb-4">
+            Target Market
+          </h2>
+          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+            We serve diverse sectors within the academic and educational
+            industries, providing specialized solutions for each student
+            segment.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                group: "School Leavers",
+                icon: <School className="w-10 h-10 text-teal-600 mx-auto" />,
+              },
+              {
+                group: "Undergraduates",
+                icon: (
+                  <GraduationCap className="w-10 h-10 text-teal-600 mx-auto" />
+                ),
+              },
+              {
+                group: "Professionals",
+                icon: <Briefcase className="w-10 h-10 text-teal-600 mx-auto" />,
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-gray-100 p-6 rounded-xl hover:bg-teal-50 transition"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+                viewport={{ once: true }}
               >
-                Apply Now
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold rounded-full"
-              >
-                Schedule a Call
-              </Button>
-            </div>
-          </motion.div>
+                <div className="mb-3">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {item.group}
+                </h3>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Company Values Section */}
+      <motion.section
+        className="py-20 bg-gray-50"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-teal-700 mb-4">
+            Company Values
+          </h2>
+          <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+            Our core values guide everything we do, from curriculum development
+            to student support services.
+          </p>
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Honesty",
+                icon: "❤️",
+                desc: "We maintain transparency and integrity in all our operations, including academic and accreditation practices.",
+              },
+              {
+                title: "Dependability",
+                icon: "🛡️",
+                desc: "Students and partners can always rely on us to deliver consistent, high-quality educational experiences.",
+              },
+              {
+                title: "Client Satisfaction",
+                icon: "🌟",
+                desc: "We prioritize student success and satisfaction, ensuring every student achieves their potential.",
+              },
+              {
+                title: "Ongoing Improvement",
+                icon: "🔄",
+                desc: "We continuously evolve to meet changing educational needs and global academic trends.",
+              },
+            ].map((value, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-left"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl mb-3 flex justify-center">
+                  {value.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2 text-center">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 text-center">{value.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Future Goals Section */}
+      <motion.section
+        className="py-20 bg-gray-50 shadow-lg"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-4xl mx-auto px-4 text-center bg-green-100 p-10 rounded-3xl shadow-sm">
+          <h2 className="text-4xl font-bold text-green-700 mb-6">
+            Future Goals
+          </h2>
+          <p className="text-xl text-gray-700">
+            To broaden our range of services and extend our geographic presence
+            while upholding our dedication to top-quality educational services,
+            thus contributing positively to the global education landscape's
+            growth and sustainability.
+          </p>
+        </div>
+      </motion.section>
     </div>
   );
 };
