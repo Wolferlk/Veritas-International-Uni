@@ -9,8 +9,12 @@ import { Subsidiaries } from "./pages/Subsidiaries/Subsidiaries";
 import { StudentTestimonials } from "./pages/StudentTestimonials/StudentTestimonials";
 import { CourseDetails } from "./pages/CourseDetails/CourseDetails";
 import CampusLife from "./pages/CampusLife/CampusLife";
+import ContactUs from "./pages/ContactUs/ContactUs";
 import Partners from "./pages/Partners/Partners";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import OurTeam from "./pages/Team/OurTeam";
+import OurStores from "./pages/Store/OurStores";
+
 
 export const App = (): JSX.Element => {
   return (
@@ -24,8 +28,11 @@ export const App = (): JSX.Element => {
         <Route path="/testimonials" element={<StudentTestimonials />} />
         <Route path="/course/:id" element={<CourseDetails />} />
         <Route path="/campus-life" element={<CampusLife />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="/store" element={<OurStores />} />
       </Routes>
     </Layout>
   );
