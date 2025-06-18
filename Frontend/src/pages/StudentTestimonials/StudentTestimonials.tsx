@@ -92,14 +92,14 @@ export const StudentTestimonials = (): JSX.Element => {
 
   const categories = ["All", "Business", "Technology", "Creative", "Healthcare"];
 
-  const filteredTestimonials = selectedCategory === "All" 
-    ? testimonials 
-    : testimonials.filter(testimonial => 
-        testimonial.program.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-        (selectedCategory === "Technology" && (testimonial.program.includes("Web Development") || testimonial.program.includes("Digital Marketing"))) ||
-        (selectedCategory === "Creative" && testimonial.program.includes("Graphic Design")) ||
-        (selectedCategory === "Healthcare" && testimonial.program.includes("Healthcare"))
-      );
+  const filteredTestimonials = selectedCategory === "All"
+    ? testimonials
+    : testimonials.filter(testimonial =>
+      testimonial.program.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+      (selectedCategory === "Technology" && (testimonial.program.includes("Web Development") || testimonial.program.includes("Digital Marketing"))) ||
+      (selectedCategory === "Creative" && testimonial.program.includes("Graphic Design")) ||
+      (selectedCategory === "Healthcare" && testimonial.program.includes("Healthcare"))
+    );
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
@@ -122,14 +122,11 @@ export const StudentTestimonials = (): JSX.Element => {
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Student
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+              <span className="block ml-4 bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
                 Success Stories
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Hear from our graduates who have transformed their careers and
-              achieved their dreams through our programs.
-            </p>
+
           </motion.div>
         </div>
       </section>
@@ -166,11 +163,10 @@ export const StudentTestimonials = (): JSX.Element => {
               <motion.button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
-                  selectedCategory === category
-                    ? "bg-teal-600 text-white shadow-lg"
-                    : "bg-white text-gray-700 hover:bg-gray-100 shadow"
-                }`}
+                className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${selectedCategory === category
+                  ? "bg-teal-600 text-white shadow-lg"
+                  : "bg-white text-gray-700 hover:bg-gray-100 shadow"
+                  }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -222,11 +218,10 @@ export const StudentTestimonials = (): JSX.Element => {
                           {[...Array(5)].map((_, i) => (
                             <StarIcon
                               key={i}
-                              className={`w-5 h-5 ${
-                                i < (filteredTestimonials[currentIndex]?.rating || 0)
-                                  ? "text-yellow-400 fill-current"
-                                  : "text-gray-300"
-                              }`}
+                              className={`w-5 h-5 ${i < (filteredTestimonials[currentIndex]?.rating || 0)
+                                ? "text-yellow-400 fill-current"
+                                : "text-gray-300"
+                                }`}
                             />
                           ))}
                         </div>
@@ -263,9 +258,8 @@ export const StudentTestimonials = (): JSX.Element => {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                      index === currentIndex ? "bg-teal-600" : "bg-gray-300"
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? "bg-teal-600" : "bg-gray-300"
+                      }`}
                   />
                 ))}
               </div>
@@ -328,11 +322,10 @@ export const StudentTestimonials = (): JSX.Element => {
                       {[...Array(5)].map((_, i) => (
                         <StarIcon
                           key={i}
-                          className={`w-4 h-4 ${
-                            i < testimonial.rating
-                              ? "text-yellow-400 fill-current"
-                              : "text-gray-300"
-                          }`}
+                          className={`w-4 h-4 ${i < testimonial.rating
+                            ? "text-yellow-400 fill-current"
+                            : "text-gray-300"
+                            }`}
                         />
                       ))}
                     </div>
