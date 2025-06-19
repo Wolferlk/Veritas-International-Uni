@@ -27,7 +27,7 @@ const ContactPage: React.FC = () => {
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init("69XOTuNay4qIML5AT");
+    emailjs.init("tEf2KTMOZsKK0sYlR");
   }, []);
 
   useEffect(() => {
@@ -45,17 +45,33 @@ const ContactPage: React.FC = () => {
 
     if (!form.current) return;
 
+    // Log form data before submission
+    const formData = new FormData(form.current);
+    console.log("Form Data before submission:");
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ": " + pair[1]);
+    }
+
     try {
       const result = await emailjs.sendForm(
-        "service_p73kqsr",
-        "template_jx0yyze",
+        "service_rwpklzc",
+        "template_0m2cmyf",
         form.current,
-        "69XOTuNay4qIML5AT"
+        "tEf2KTMOZsKK0sYlR"
       );
+
+      // log the result
+      console.log("EmailJS Response:", result);
+      console.log("Submitted Form Data:", {
+        name: formData.get("from_name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+      });
 
       if (result.text === "OK") {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", message: "" });
+        console.log("Form submitted successfully, form data cleared");
       }
     } catch (error) {
       console.error("Error sending email:", error);
