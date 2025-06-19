@@ -11,6 +11,11 @@ import { CourseDetails } from "./pages/CourseDetails/CourseDetails";
 import CampusLife from "./pages/CampusLife/CampusLife";
 import ContactUs from "./pages/ContactUs/ContactUs";
 
+import Partners from "./pages/Partners/Partners";
+import OurTeam from "./pages/Team/OurTeam";
+import OurStores from "./pages/Store/OurStores";
+
+
 export const App = (): JSX.Element => {
   return (
     <Layout>
@@ -23,7 +28,13 @@ export const App = (): JSX.Element => {
         <Route path="/testimonials" element={<StudentTestimonials />} />
         <Route path="/course/:id" element={<CourseDetails />} />
         <Route path="/campus-life" element={<CampusLife />} />
+
         <Route path="/contact" element={<ContactUs />} />
+
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/team" element={<OurTeam />} />
+        <Route path="/store" element={<OurStores />} />
+
       </Routes>
     </Layout>
   );
