@@ -1,21 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 
 export const Register = (): JSX.Element => {
-  const navigate = useNavigate();
+  const formRef = useRef<HTMLDivElement>(null);
 
   const handleRegisterClick = () => {
-    window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLScwNpvd5c1zwZq-sPs0Lkip7LmUtgKc2s8weVJC_ySDdvfGeQ/viewform?usp=dialog",
-      "_blank"
-    );
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-600 text-white">
+      <section className="py-12 bg-gradient-to-br from-teal-600 via-emerald-600 to-cyan-600 text-white">
         <div className="container mx-auto px-6">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -98,6 +97,34 @@ export const Register = (): JSX.Element => {
             </motion.div>
           </div>
         </div>
+      </section>
+
+      {/* Google Form Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6 flex justify-center items-center">
+          <motion.div
+            ref={formRef}
+            className="w-full flex justify-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScwNpvd5c1zwZq-sPs0Lkip7LmUtgKc2s8weVJC_ySDdvfGeQ/viewform?embedded=true"
+              width="140%"
+              height="1600"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              className="rounded-lg shadow-xl bg-white"
+              title="Registration Form"
+              style={{ minHeight: 700, display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+            >
+              Loading…
+            </iframe>
+          </motion.div>
+        </div>
+        
       </section>
     </div>
   );
