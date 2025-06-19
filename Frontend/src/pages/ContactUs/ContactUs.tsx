@@ -373,7 +373,7 @@ const ContactPage: React.FC = () => {
                       </label>
                       <input
                         type="email"
-                        name="from_email"
+                        name="email"
                         required
                         value={formData.email}
                         onChange={(e) =>
