@@ -94,10 +94,11 @@ const CampusLife = () => {
       {/* Hero Section with Parallax */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <motion.div className="absolute inset-0 z-0" style={{ y }}>
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-teal-900" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(120,119,198,0.3),transparent)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(255,119,198,0.2),transparent)] animate-pulse delay-1000" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,rgba(56,178,172,0.2),transparent)] animate-pulse delay-2000" />
+          {/* Green Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900 via-emerald-800 to-teal-800" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,197,94,0.3),transparent)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(132,204,22,0.2),transparent)] animate-pulse delay-1000" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_60%,rgba(5,150,105,0.2),transparent)] animate-pulse delay-2000" />
         </motion.div>
 
         {/* Floating Particles */}
@@ -132,11 +133,12 @@ const CampusLife = () => {
             animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 1, type: "spring" }}
           >
-            <Sparkles className="w-20 h-20 mx-auto mb-8 text-yellow-400" />
+            {/* Green Sparkles Icon */}
+            <Sparkles className="w-20 h-20 mx-auto mb-8 text-green-400" />
           </motion.div>
 
           <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight"
+            className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-emerald-300 via-lime-400 to-green-600 bg-clip-text text-transparent leading-tight"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -164,7 +166,7 @@ const CampusLife = () => {
         >
           <div className="w-8 h-12 border-2 border-white/30 rounded-full flex justify-center">
             <motion.div
-              className="w-1 h-3 bg-gradient-to-b from-pink-400 to-purple-400 rounded-full mt-2"
+              className="w-1 h-3 bg-gradient-to-b from-lime-400 to-green-500 rounded-full mt-2"
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
