@@ -43,7 +43,7 @@ export const Subsidiaries = (): JSX.Element => {
               transition={{ duration: 0.3 }}
             />
             <div>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 uppercase">
                 Veritas International (PVT) Ltd
               </h2>
               <p className="text-lg text-gray-600 mb-2">
