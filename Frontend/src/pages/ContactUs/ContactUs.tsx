@@ -220,7 +220,7 @@ const ContactPage: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold text-lg">
-                          info.veritascampus@gmail.com
+                          contact.veritascampus@gmail.com
                         </p>
                         <p className="text-gray-500 text-sm">
                           Send us an email
