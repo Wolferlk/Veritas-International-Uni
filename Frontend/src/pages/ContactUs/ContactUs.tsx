@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Phone,
   Mail,
@@ -11,10 +11,73 @@ import {
   Instagram,
   Linkedin,
 } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const ContactPage: React.FC = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isHovered, setIsHovered] = useState<string | null>(null);
+
+  const form = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init("tEf2KTMOZsKK0sYlR");
+  }, []);
+
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus("");
+      }, 3000); // Message will disappear after 3 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+    // Log form data before submission
+    const formData = new FormData(form.current);
+    console.log("Form Data before submission:");
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ": " + pair[1]);
+    }
+
+    try {
+      const result = await emailjs.sendForm(
+        "service_rwpklzc",
+        "template_0m2cmyf",
+        form.current,
+        "tEf2KTMOZsKK0sYlR"
+      );
+
+      // log the result
+      console.log("EmailJS Response:", result);
+      console.log("Submitted Form Data:", {
+        name: formData.get("from_name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+      });
+
+      if (result.text === "OK") {
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+        console.log("Form submitted successfully, form data cleared");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setStatus("Failed to send message. Please try again.");
+    }
+  };
 
   const heroImageUrl =
     "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80";
@@ -157,7 +220,7 @@ const ContactPage: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold text-lg">
-                          info.veritascampus@gmail.com
+                          contact.veritascampus@gmail.com
                         </p>
                         <p className="text-gray-500 text-sm">
                           Send us an email
@@ -277,32 +340,90 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
 
-          {/* CTA Section */}
-          <div className="relative group">
+          {/* Contact Form Section */}
+          <div className="mb-20 relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-green-600 rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
             <div className="relative backdrop-blur-sm bg-white/80 rounded-3xl shadow-2xl p-12 border border-white/20 hover:shadow-3xl transition-all duration-500">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-emerald-100 to-green-100 rounded-full mb-8 shadow-lg">
-                  <Mail className="w-10 h-10 text-emerald-600" />
-                </div>
-                <h3 className="text-3xl font-bold mb-6 text-gray-800">
-                  Ready to Get Started?
+              <div className="max-w-3xl mx-auto">
+                <h3 className="text-3xl font-bold mb-6 text-gray-800 text-center">
+                  Send Us a Message
                 </h3>
-                <p className="text-gray-600 mb-10 max-w-lg mx-auto text-lg leading-relaxed">
-                  Ready to get in touch? Click the button below to send us an
-                  email directly and let's begin this journey together.
-                </p>
-                <a
-                  href="mailto:info.veritascampus@gmail.com"
-                  className="inline-flex items-center space-x-4 bg-teal-600 hover:bg-teal-700 text-white px-10 py-5 rounded-2xl transition-all duration-300 font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 active:scale-95 group"
-                >
-                  <Mail className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                  <span>Send Email</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </a>
-                <p className="text-sm text-gray-500 mt-6 font-medium">
-                  info.veritascampus@gmail.com
-                </p>
+                <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-gray-700">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        name="from_name"
+                        required
+                        value={formData.name}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all duration-200"
+                        placeholder="Your name"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-gray-700">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all duration-200"
+                        placeholder="your.email@example.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2 text-gray-700">
+                      Message
+                    </label>
+                    <textarea
+                      name="message"
+                      required
+                      value={formData.message}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
+                      rows={4}
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 transition-all duration-200"
+                      placeholder="Your message here..."
+                    ></textarea>
+                  </div>
+
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      className="inline-flex items-center space-x-2 bg-teal-600 hover:bg-teal-700 text-white px-8 py-3 rounded-xl transition-all duration-300 font-medium shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1 active:scale-95"
+                    >
+                      <Send className="w-5 h-5" />
+                      <span>Send Message</span>
+                    </button>
+
+                    {status && (
+                      <div
+                        className={`mt-4 p-3 rounded-lg transition-opacity duration-500 ${
+                          status.includes("success")
+                            ? "bg-green-50 text-green-600 border border-green-200"
+                            : "bg-red-50 text-red-600 border border-red-200"
+                        }`}
+                      >
+                        {status}
+                      </div>
+                    )}
+                  </div>
+                </form>
               </div>
             </div>
           </div>
