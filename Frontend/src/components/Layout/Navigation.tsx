@@ -64,7 +64,7 @@ export const Navigation = (): JSX.Element => {
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/10 backdrop-blur-2xl border-b border-white/20 shadow-2xl shadow-black/10"
+            ? "bg-white/80 backdrop-blur-md border-b border-gray-300 shadow-lg"
             : "bg-gradient-to-r from-black/5 to-transparent backdrop-blur-sm"
         }`}
         initial={{ y: -100, opacity: 0 }}
@@ -117,14 +117,14 @@ export const Navigation = (): JSX.Element => {
 
               <div className="group-hover:translate-x-1 transition-transform duration-300">
                 <motion.h1
-                  className="text-2xl font-bold bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent"
+                  className="text-2xl font-bold bg-gradient-to-r from-gray-900 via-purple-800 to-gray-900 bg-clip-text text-transparent uppercase"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
                 >
                   Veritas International
                 </motion.h1>
-                <motion.p
+                <motion.p 
                   className="text-sm text-gray-600 font-medium"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -147,19 +147,19 @@ export const Navigation = (): JSX.Element => {
                 >
                   <Link
                     to={item.href}
-                    className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-full group-hover:scale-105 ${
+                    className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-full group overflow-hidden ${
                       location.pathname === item.href
-                        ? "text-white bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg shadow-purple-500/25"
-                        : "text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-900/25 hover:to-pink-900/25 hover:backdrop-blur-lg"
+                        ? "text-white bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 shadow-lg shadow-green-500/25"
+                        : "text-black hover:text-white"
                     }`}
                   >
                     <span className="relative z-10">{item.name}</span>
 
-                    {/* Hover effect background */}
+                    {/* Enhanced hover background */}
                     <motion.div
-                      className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm opacity-0 group-hover:opacity-100"
+                      className="absolute inset-0 rounded-full bg-gradient-to-r from-green-700/60 to-emerald-700/60 backdrop-blur-md opacity-0 group-hover:opacity-90 transition-opacity duration-300"
                       initial={false}
-                      transition={{ duration: 0.2 }}
+                      transition={{ duration: 0.3 }}
                     />
 
                     {/* Active indicator */}
@@ -189,27 +189,27 @@ export const Navigation = (): JSX.Element => {
                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
               >
                 <Link to="/register">
-                <Button className="relative group bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 text-white px-8 py-3 rounded-full font-semibold shadow-xl shadow-teal-500/25 border border-white/20 overflow-hidden">
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100"
-                    transition={{ duration: 0.3 }}
-                  />
-                  <span className="relative z-10 flex items-center space-x-2">
-                    <span>Apply Now</span>
+                  <Button className="relative group bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 hover:from-emerald-700 hover:via-teal-700 hover:to-cyan-700 text-white px-8 py-3 rounded-full font-semibold shadow-xl shadow-teal-500/25 border border-white/20 overflow-hidden">
                     <motion.div
-                      animate={{ x: [0, 4, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.div>
-                  </span>
+                      className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100"
+                      transition={{ duration: 0.3 }}
+                    />
+                    <span className="relative z-10 flex items-center space-x-2">
+                      <span>Apply Now</span>
+                      <motion.div
+                        animate={{ x: [0, 4, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        <ArrowRight className="w-4 h-4" />
+                      </motion.div>
+                    </span>
 
-                  {/* Shimmer effect */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full"
-                    transition={{ duration: 0.6 }}
-                  />
-                </Button>
+                    {/* Shimmer effect */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full"
+                      transition={{ duration: 0.6 }}
+                    />
+                  </Button>
                 </Link>
               </motion.div>
             </div>
@@ -274,8 +274,8 @@ export const Navigation = (): JSX.Element => {
                           to={item.href}
                           className={`px-4 py-3 text-sm font-semibold rounded-2xl transition-all duration-300 flex items-center justify-between group ${
                             location.pathname === item.href
-                              ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25"
-                              : "text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-purple-900/25 hover:to-pink-900/25 hover:backdrop-blur-lg"
+                              ? "text-white bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 shadow-lg shadow-green-500/25"
+                              : "text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-green-900/25 hover:to-emerald-900/25 hover:backdrop-blur-lg"
                           }`}
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
