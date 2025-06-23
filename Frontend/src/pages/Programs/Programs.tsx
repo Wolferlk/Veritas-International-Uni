@@ -12,7 +12,7 @@ import { Card, CardContent } from "../../components/ui/card";
 
 // Filters
 const categories = ["All", "Business", "Technology", "Healthcare", "Creative"];
-const levels = ["All", "Diploma", "Bachelor’s", "Master", "Doctoral"];
+const levels = ["All", "Diploma", "Bachelor’s", "Master", "Doctoral", "Certificate"];
 
 // Programs data (truncated for brevity — keep your full list)
 const programs = [
@@ -156,6 +156,86 @@ const programs = [
       "Industry Connections",
     ],
   },
+  {
+  id: 8,
+  title: "Certified Payroll Management Expert",
+  category: "Business",
+  duration: "3 Months",
+  level: "Certificate",
+  students: "850+",
+  rating: 4.7,
+  price: "$699",
+  image:
+    "https://images.pexels.com/photos/7821683/pexels-photo-7821683.jpeg?auto=compress&cs=tinysrgb&w=600",
+  description:
+    "Gain expertise in payroll processes, compliance, and reporting with this practical certification designed for HR and finance professionals.",
+  features: [
+    "Hands-on Payroll Tools",
+    "Legal Compliance Modules",
+    "Flexible Online Access",
+    "Certificate of Completion",
+  ],
+},
+{
+  id: 9,
+  title: "Certificate in Strategic HR Analytics & Workforce Planning",
+  category: "Business",
+  duration: "3 Months",
+  level: "Certificate",
+  students: "950+",
+  rating: 4.8,
+  price: "$799",
+  image:
+    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+  description:
+    "Transform HR data into strategic insights to drive talent decisions and workforce optimization.",
+  features: [
+    "Real-world Case Studies",
+    "Excel & Power BI Integration",
+    "Workforce Forecasting Models",
+    "Career Boost in HR Analytics",
+  ],
+},
+{
+  id: 10,
+  title: "Certificate in Employer Branding & Talent Acquisition",
+  category: "Business",
+  duration: "3 Months",
+  level: "Certificate",
+  students: "770+",
+  rating: 4.6,
+  price: "$749",
+  image:
+    "https://images.pexels.com/photos/5989929/pexels-photo-5989929.jpeg?auto=compress&cs=tinysrgb&w=600",
+  description:
+    "Attract top talent by building a strong employer brand and mastering modern recruitment strategies.",
+  features: [
+    "Employer Branding Frameworks",
+    "Recruitment Funnel Techniques",
+    "Live Projects",
+    "Expert-Led Sessions",
+  ],
+},
+{
+  id: 11,
+  title: "Professional Certificate in Content Creation",
+  category: "Business",
+  duration: "3 Months",
+  level: "Certificate",
+  students: "1,100+",
+  rating: 4.9,
+  price: "$599",
+  image:
+    "https://images.pexels.com/photos/6476588/pexels-photo-6476588.jpeg?auto=compress&cs=tinysrgb&w=600",
+  description:
+    "Master content strategy, writing, video production, and social media storytelling to build impactful digital content.",
+  features: [
+    "Video & Visual Content Training",
+    "SEO & Social Media Strategy",
+    "Portfolio Development",
+    "Mentorship from Creators",
+  ],
+}
 ];
 
 export const Programs = (): JSX.Element => {
