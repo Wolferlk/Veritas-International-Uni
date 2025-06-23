@@ -24,8 +24,7 @@ const footerLinks = {
   campus: [
     { name: "Campus Life", href: "/campus-life" },
     { name: "Our Team", href: "/team" },
-    { name: "Partners", href: "/partners" },
-    { name: "Store", href: "/store" },
+    { name: "Partners", href: "/partners" }
   ],
 };
 

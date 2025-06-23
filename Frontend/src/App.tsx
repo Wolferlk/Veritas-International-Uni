@@ -13,7 +13,7 @@ import ContactUs from "./pages/ContactUs/ContactUs";
 import Partners from "./pages/Partners/Partners";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import OurTeam from "./pages/Team/OurTeam";
-import OurStores from "./pages/Store/OurStores";
+
 
 
 export const App = (): JSX.Element => {
@@ -32,7 +32,6 @@ export const App = (): JSX.Element => {
         <Route path="/partners" element={<Partners />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/team" element={<OurTeam />} />
-        <Route path="/store" element={<OurStores />} />
       </Routes>
     </Layout>
   );
