@@ -235,7 +235,67 @@ const programs = [
     "Portfolio Development",
     "Mentorship from Creators",
   ],
-}
+},
+{
+    "id": 12,
+    "title": "Professional Diploma in Creative Design",
+    "category": "Creative",
+    "duration": "6 Months",
+    "level": "Diploma",
+    "students": "1,500+",
+    "rating": 4.7,
+    "price": "Flexible Payment Plan",
+    "mode": "Online Sessions",
+    "dates": "Weekends",
+    "description": "Develop your creative skills with a professional diploma focusing on design principles, tools, and applications.",
+    "image": "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "features": [
+      "Flexible Payments Plan",
+      "Weekend Classes",
+      "Online Learning",
+      "Industry-Relevant Curriculum"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Professional Diploma in Business Administration",
+    "category": "Business",
+    "duration": "6 Months",
+    "level": "Diploma",
+    "students": "2,200+",
+    "rating": 4.8,
+    "price": "Flexible Payment Plan",
+    "mode": "Online Sessions",
+    "dates": "Weekends",
+    "description": "Gain comprehensive knowledge of business administration including management, finance, and operations.",
+    "image": "https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "features": [
+      "Flexible Payments Plan",
+      "Weekend Classes",
+      "Online Learning",
+      "Career-Focused Training"
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Professional Diploma in HR",
+    "category": "Business",
+    "duration": "6 Months",
+    "level": "Diploma",
+    "students": "1,800+",
+    "rating": 4.9,
+    "price": "Flexible Payment Plan",
+    "mode": "Online Sessions",
+    "dates": "Weekends",
+    "description": "Master human resource management with skills in recruitment, employee relations, and organizational development.",
+    "image": "https://images.pexels.com/photos/3184290/pexels-photo-3184290.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "features": [
+      "Flexible Payments Plan",
+      "Weekend Classes",
+      "Online Learning",
+      "Expert Guidance"
+    ]
+  }
 ];
 
 export const Programs = (): JSX.Element => {
