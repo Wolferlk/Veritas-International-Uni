@@ -9,74 +9,42 @@ import {
 } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
+    name: "Methmi Maduka",
     program: "Diploma in HR Management",
     year: "2023",
     rating: 5,
-    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=300",
-    quote: "The HR Management program at Veritas completely transformed my career. The practical approach and industry connections helped me land my dream job as an HR Manager within 3 months of graduation.",
+    image: "https://scontent.fcmb11-1.fna.fbcdn.net/v/t39.30808-6/481064424_975522307869805_4245356682554613524_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHt2p2seXdDWT8pyokqPm9DixH8xXjY792LEfzFeNjv3ZP2NtQFq6ie_T2cGy7wsPs6ewY7XEohKIKiYKQoyq3X&_nc_ohc=KLOs-OXcxVEQ7kNvwG0I9DT&_nc_oc=Adku-ipFcopwMkJfQEeds6L9dhC_yUPWhn_vw729qzxCJ4V-SxGKjFktKqvbNprh71HguBIXA5BT53YuSDA0sY-d&_nc_zt=23&_nc_ht=scontent.fcmb11-1.fna&_nc_gid=ErDMWYjkF6ZvhLy25ZUP9A&oh=00_AfOTFi628LYbRroo6D8xa13btmadsPoOAdBsGgwcEZmAtw&oe=68602FC8",
+    quote: "If you're looking for a place that blends academic excellence with real-world relevance,Veritas International Campus is the answer. An unforgettable and empowering experience !",
     achievement: "HR Manager at Tech Solutions Inc.",
     video: true,
   },
   {
     id: 2,
-    name: "Michael Chen",
+    name: "Manushika Dewindi",
     program: "Web Development Bootcamp",
     year: "2023",
     rating: 5,
-    image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300",
-    quote: "From zero coding experience to full-stack developer in 6 months! The instructors were amazing, and the hands-on projects gave me the confidence to start my own freelance business.",
+    image: "https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-1/475191292_951434463759038_7947299757402528946_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFCyY7Hg-MYlj-_0qIc3vGmKxMITyLyd1grEwhPIvJ3WFogFseSpiJFr_dMU0i9Z3CYBZoHMWocIb5_JH7hqbcZ&_nc_ohc=npYiGkseLX0Q7kNvwGR8tbo&_nc_oc=AdnXrRJkBegV-Y5P02S8668DSrsxWu7qaesPC9KtA18gUND52Pyhb_ugs0XAwcqYCF-wzFvOhQGVerx0Q_d7AEp4&_nc_zt=24&_nc_ht=scontent.fcmb11-2.fna&_nc_gid=RV6B8R2owp5mzbmXSG8xUw&oh=00_AfNz38W62YIT10Hw6OX_QR3Uhl_DOGqEqdfqc6L1RvAClA&oe=686023B0",
+    quote: "At Veritas International Campus, I found not just education, but inspiration. The faculty, facilities, and community truly empoer students to reach their fullest potential.",
     achievement: "Full-Stack Developer & Entrepreneur",
     video: false,
   },
   {
     id: 3,
-    name: "Priya Patel",
+    name: "Buddima Jayasanka",
     program: "Digital Marketing Mastery",
     year: "2024",
     rating: 5,
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300",
-    quote: "The digital marketing course was incredibly comprehensive. I learned everything from SEO to social media advertising. Now I'm running successful campaigns for multiple clients.",
+    image: "https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-1/509258301_702355025912370_7885668384160660497_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeFtjJ0zs5iOpLj77RDzc3iGbr1hj34R9oJuvWGPfhH2gpErccKUbjexh6ZnOk4Gm1SItFsB1Z7XlkDEAkduhY2m&_nc_ohc=N2crDBM7KvQQ7kNvwEYi_LN&_nc_oc=AdmyQ8AqDr5ZP77VOibhXqdJiCU2n_i3zFDZPzg1tm0BvsDfv1Va4Z1OHWc_3WgTj0tSefHzCkTSOaVqWFN5fXYh&_nc_zt=24&_nc_ht=scontent.fcmb11-2.fna&_nc_gid=nyj4YfcKiDrEoCYSwnTnyw&oh=00_AfMKhhw6bhxRRc-ftxvBgvM406d1hWEDmeTHt7xcbzh-AQ&oe=6860330C",
+    quote: "Veristas International Campus has been a game-changer on my academic journey. Their expert guidance, reliable support, and dedication to student success make them the gold standard in international education services.From the first interaction to the final steps, Veritas International Campus has shown exceptional professionalism and care.Their personalized approach and top-tier service make them a trusted partner for and student aiming high.",
     achievement: "Digital Marketing Consultant",
     video: true,
-  },
-  {
-    id: 4,
-    name: "David Rodriguez",
-    program: "Business Administration",
-    year: "2023",
-    rating: 5,
-    image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=300",
-    quote: "The business program provided me with a solid foundation in management principles. The case studies and real-world applications were invaluable for my career growth.",
-    achievement: "Operations Manager at Global Corp",
-    video: false,
-  },
-  {
-    id: 5,
-    name: "Emma Thompson",
-    program: "Graphic Design Professional",
-    year: "2024",
-    rating: 5,
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300",
-    quote: "The creative environment and expert guidance helped me develop my artistic skills. I now work with top brands and have my own design studio.",
-    achievement: "Creative Director & Studio Owner",
-    video: true,
-  },
-  {
-    id: 6,
-    name: "James Wilson",
-    program: "Healthcare Management",
-    year: "2023",
-    rating: 5,
-    image: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300",
-    quote: "The healthcare management program equipped me with the skills needed to lead in the healthcare industry. The focus on both management and healthcare specifics was perfect.",
-    achievement: "Hospital Administrator",
-    video: false,
-  },
+  }
 ];
 
 const stats = [
@@ -109,6 +77,8 @@ export const StudentTestimonials = (): JSX.Element => {
     setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="pt-20">
       {/* Hero Section */}
@@ -132,7 +102,7 @@ export const StudentTestimonials = (): JSX.Element => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -152,10 +122,10 @@ export const StudentTestimonials = (): JSX.Element => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Filter Section */}
-      <section className="py-8 bg-gray-50 border-b">
+      {/* <section className="py-8 bg-gray-50 border-b">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap items-center justify-center gap-4">
             <span className="text-gray-600 font-medium">Filter by program:</span>
@@ -175,10 +145,10 @@ export const StudentTestimonials = (): JSX.Element => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Testimonial */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <AnimatePresence mode="wait">
@@ -244,37 +214,37 @@ export const StudentTestimonials = (): JSX.Element => {
             </AnimatePresence>
 
             {/* Navigation */}
-            <div className="flex items-center justify-center mt-8 space-x-4">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={prevTestimonial}
-                className="rounded-full w-12 h-12 p-0"
-              >
-                <ChevronLeftIcon className="w-5 h-5" />
-              </Button>
-              <div className="flex space-x-2">
-                {filteredTestimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? "bg-teal-600" : "bg-gray-300"
-                      }`}
-                  />
-                ))}
-              </div>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={nextTestimonial}
-                className="rounded-full w-12 h-12 p-0"
-              >
-                <ChevronRightIcon className="w-5 h-5" />
-              </Button>
-            </div>
-          </div>
+      {/*<div className="flex items-center justify-center mt-8 space-x-4">
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={prevTestimonial}
+          className="rounded-full w-12 h-12 p-0"
+        >
+          <ChevronLeftIcon className="w-5 h-5" />
+        </Button>
+        <div className="flex space-x-2">
+          {filteredTestimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? "bg-teal-600" : "bg-gray-300"
+                }`}
+            />
+          ))}
         </div>
-      </section>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={nextTestimonial}
+          className="rounded-full w-12 h-12 p-0"
+        >
+          <ChevronRightIcon className="w-5 h-5" />
+        </Button>
+      </div>
+    </div>
+        </div >
+      </section > */}
 
       {/* All Testimonials Grid */}
       <section className="py-20 bg-white">
@@ -286,17 +256,17 @@ export const StudentTestimonials = (): JSX.Element => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            {/* <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               More Success Stories
-            </h2>
+            </h2> */}
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of successful graduates who have transformed their
+              Join to our successful graduates who have transformed their
               careers with our programs.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredTestimonials.slice(0, 6).map((testimonial, index) => (
+            {testimonials.slice(0, 6).map((testimonial, index) => (
               <motion.div
                 key={testimonial.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -329,8 +299,8 @@ export const StudentTestimonials = (): JSX.Element => {
                         />
                       ))}
                     </div>
-                    <blockquote className="text-gray-700 text-sm leading-relaxed mb-4">
-                      "{testimonial.quote.substring(0, 120)}..."
+                    <blockquote className="text-gray-700 text-sm leading-relaxed mb-4 flex">
+                      "{testimonial.quote.substring(0, 208)} ..."
                     </blockquote>
                     <p className="text-teal-600 font-medium text-sm">
                       {testimonial.achievement}
@@ -363,6 +333,7 @@ export const StudentTestimonials = (): JSX.Element => {
               <Button
                 size="lg"
                 className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
+                onClick={() => navigate('/register')}
               >
                 Apply Now
               </Button>
@@ -370,13 +341,15 @@ export const StudentTestimonials = (): JSX.Element => {
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold rounded-full"
+                onClick={() => window.location.href = 'tel:+94777897901'}
               >
                 Schedule a Call
               </Button>
+
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </div >
   );
 };
