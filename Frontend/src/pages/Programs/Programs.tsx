@@ -12,7 +12,14 @@ import { Card, CardContent } from "../../components/ui/card";
 
 // Filters
 const categories = ["All", "Business", "Technology", "Healthcare", "Creative"];
-const levels = ["All", "Diploma", "Bachelor’s", "Master", "Doctoral", "Certificate"];
+const levels = [
+  "All",
+  "Diploma",
+  "Bachelor’s",
+  "Master",
+  "Doctoral",
+  "Certificate",
+];
 
 // Programs data (truncated for brevity — keep your full list)
 const programs = [
@@ -87,8 +94,7 @@ const programs = [
     price: "$1,799",
     image:
       "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description:
-      "Lead across borders with global business acumen.",
+    description: "Lead across borders with global business acumen.",
     features: [
       "Business Focus",
       "Regulatory Training",
@@ -98,7 +104,8 @@ const programs = [
   },
   {
     id: 5,
-    title: "Bachelor of Systems Engineering Specializing in Information Technology",
+    title:
+      "Bachelor of Systems Engineering Specializing in Information Technology",
     category: "Technology",
     duration: "48 Months",
     level: "Bachelor’s",
@@ -107,8 +114,7 @@ const programs = [
     price: "$1,599",
     image:
       "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description:
-      "Build digital ecosystems that power tomorrow.",
+    description: "Build digital ecosystems that power tomorrow.",
     features: [
       "Portfolio Projects",
       "Tech Stack Training",
@@ -157,145 +163,151 @@ const programs = [
     ],
   },
   {
-  id: 8,
-  title: "Certified Payroll Management Expert",
-  category: "Business",
-  duration: "3 Months",
-  level: "Certificate",
-  students: "850+",
-  rating: 4.7,
-  price: "$699",
-  image:
-    "https://images.pexels.com/photos/7821683/pexels-photo-7821683.jpeg?auto=compress&cs=tinysrgb&w=600",
-  description:
-    "Gain expertise in payroll processes, compliance, and reporting with this practical certification designed for HR and finance professionals.",
-  features: [
-    "Hands-on Payroll Tools",
-    "Legal Compliance Modules",
-    "Flexible Online Access",
-    "Certificate of Completion",
-  ],
-},
-{
-  id: 9,
-  title: "Certificate in Strategic HR Analytics & Workforce Planning",
-  category: "Business",
-  duration: "3 Months",
-  level: "Certificate",
-  students: "950+",
-  rating: 4.8,
-  price: "$799",
-  image:
-    "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
-  description:
-    "Transform HR data into strategic insights to drive talent decisions and workforce optimization.",
-  features: [
-    "Real-world Case Studies",
-    "Excel & Power BI Integration",
-    "Workforce Forecasting Models",
-    "Career Boost in HR Analytics",
-  ],
-},
-{
-  id: 10,
-  title: "Certificate in Employer Branding & Talent Acquisition",
-  category: "Business",
-  duration: "3 Months",
-  level: "Certificate",
-  students: "770+",
-  rating: 4.6,
-  price: "$749",
-  image:
-    "https://images.pexels.com/photos/5989929/pexels-photo-5989929.jpeg?auto=compress&cs=tinysrgb&w=600",
-  description:
-    "Attract top talent by building a strong employer brand and mastering modern recruitment strategies.",
-  features: [
-    "Employer Branding Frameworks",
-    "Recruitment Funnel Techniques",
-    "Live Projects",
-    "Expert-Led Sessions",
-  ],
-},
-{
-  id: 11,
-  title: "Professional Certificate in Content Creation",
-  category: "Business",
-  duration: "3 Months",
-  level: "Certificate",
-  students: "1,100+",
-  rating: 4.9,
-  price: "$599",
-  image:
-    "https://images.pexels.com/photos/6476588/pexels-photo-6476588.jpeg?auto=compress&cs=tinysrgb&w=600",
-  description:
-    "Master content strategy, writing, video production, and social media storytelling to build impactful digital content.",
-  features: [
-    "Video & Visual Content Training",
-    "SEO & Social Media Strategy",
-    "Portfolio Development",
-    "Mentorship from Creators",
-  ],
-},
-{
-    "id": 12,
-    "title": "Professional Diploma in Creative Design",
-    "category": "Creative",
-    "duration": "6 Months",
-    "level": "Diploma",
-    "students": "1,500+",
-    "rating": 4.7,
-    "price": "Flexible Payment Plan",
-    "mode": "Online Sessions",
-    "dates": "Weekends",
-    "description": "Develop your creative skills with a professional diploma focusing on design principles, tools, and applications.",
-    "image": "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "features": [
-      "Flexible Payments Plan",
-      "Weekend Classes",
-      "Online Learning",
-      "Industry-Relevant Curriculum"
-    ]
+    id: 8,
+    title: "Certified Payroll Management Expert",
+    category: "Business",
+    duration: "3 Months",
+    level: "Certificate",
+    students: "850+",
+    rating: 4.7,
+    price: "$699",
+    image:
+      "https://images.pexels.com/photos/7821683/pexels-photo-7821683.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Gain expertise in payroll processes, compliance, and reporting with this practical certification designed for HR and finance professionals.",
+    features: [
+      "Hands-on Payroll Tools",
+      "Legal Compliance Modules",
+      "Flexible Online Access",
+      "Certificate of Completion",
+    ],
   },
   {
-    "id": 13,
-    "title": "Professional Diploma in Business Administration",
-    "category": "Business",
-    "duration": "6 Months",
-    "level": "Diploma",
-    "students": "2,200+",
-    "rating": 4.8,
-    "price": "Flexible Payment Plan",
-    "mode": "Online Sessions",
-    "dates": "Weekends",
-    "description": "Gain comprehensive knowledge of business administration including management, finance, and operations.",
-    "image": "https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "features": [
-      "Flexible Payments Plan",
-      "Weekend Classes",
-      "Online Learning",
-      "Career-Focused Training"
-    ]
+    id: 9,
+    title: "Certificate in Strategic HR Analytics & Workforce Planning",
+    category: "Business",
+    duration: "3 Months",
+    level: "Certificate",
+    students: "950+",
+    rating: 4.8,
+    price: "$799",
+    image:
+      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Transform HR data into strategic insights to drive talent decisions and workforce optimization.",
+    features: [
+      "Real-world Case Studies",
+      "Excel & Power BI Integration",
+      "Workforce Forecasting Models",
+      "Career Boost in HR Analytics",
+    ],
   },
   {
-    "id": 14,
-    "title": "Professional Diploma in HR",
-    "category": "Business",
-    "duration": "6 Months",
-    "level": "Diploma",
-    "students": "1,800+",
-    "rating": 4.9,
-    "price": "Flexible Payment Plan",
-    "mode": "Online Sessions",
-    "dates": "Weekends",
-    "description": "Master human resource management with skills in recruitment, employee relations, and organizational development.",
-    "image": "https://images.pexels.com/photos/3184290/pexels-photo-3184290.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "features": [
+    id: 10,
+    title: "Certificate in Employer Branding & Talent Acquisition",
+    category: "Business",
+    duration: "3 Months",
+    level: "Certificate",
+    students: "770+",
+    rating: 4.6,
+    price: "$749",
+    image:
+      "https://images.pexels.com/photos/5989929/pexels-photo-5989929.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Attract top talent by building a strong employer brand and mastering modern recruitment strategies.",
+    features: [
+      "Employer Branding Frameworks",
+      "Recruitment Funnel Techniques",
+      "Live Projects",
+      "Expert-Led Sessions",
+    ],
+  },
+  {
+    id: 11,
+    title: "Professional Certificate in Content Creation",
+    category: "Business",
+    duration: "3 Months",
+    level: "Certificate",
+    students: "1,100+",
+    rating: 4.9,
+    price: "$599",
+    image:
+      "https://images.pexels.com/photos/6476588/pexels-photo-6476588.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Master content strategy, writing, video production, and social media storytelling to build impactful digital content.",
+    features: [
+      "Video & Visual Content Training",
+      "SEO & Social Media Strategy",
+      "Portfolio Development",
+      "Mentorship from Creators",
+    ],
+  },
+  {
+    id: 12,
+    title: "Professional Diploma in Creative Design",
+    category: "Creative",
+    duration: "6 Months",
+    level: "Diploma",
+    students: "1,500+",
+    rating: 4.7,
+    price: "Flexible Payment Plan",
+    mode: "Online Sessions",
+    dates: "Weekends",
+    description:
+      "Develop your creative skills with a professional diploma focusing on design principles, tools, and applications.",
+    image:
+      "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600",
+    features: [
       "Flexible Payments Plan",
       "Weekend Classes",
       "Online Learning",
-      "Expert Guidance"
-    ]
-  }
+      "Industry-Relevant Curriculum",
+    ],
+  },
+  {
+    id: 13,
+    title: "Professional Diploma in Business Administration",
+    category: "Business",
+    duration: "6 Months",
+    level: "Diploma",
+    students: "2,200+",
+    rating: 4.8,
+    price: "Flexible Payment Plan",
+    mode: "Online Sessions",
+    dates: "Weekends",
+    description:
+      "Gain comprehensive knowledge of business administration including management, finance, and operations.",
+    image:
+      "https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg?auto=compress&cs=tinysrgb&w=600",
+    features: [
+      "Flexible Payments Plan",
+      "Weekend Classes",
+      "Online Learning",
+      "Career-Focused Training",
+    ],
+  },
+  {
+    id: 14,
+    title: "Professional Diploma in HR",
+    category: "Business",
+    duration: "6 Months",
+    level: "Diploma",
+    students: "1,800+",
+    rating: 4.9,
+    price: "Flexible Payment Plan",
+    mode: "Online Sessions",
+    dates: "Weekends",
+    description:
+      "Master human resource management with skills in recruitment, employee relations, and organizational development.",
+    image:
+      "https://images.pexels.com/photos/3184290/pexels-photo-3184290.jpeg?auto=compress&cs=tinysrgb&w=600",
+    features: [
+      "Flexible Payments Plan",
+      "Weekend Classes",
+      "Online Learning",
+      "Expert Guidance",
+    ],
+  },
 ];
 
 export const Programs = (): JSX.Element => {
@@ -349,10 +361,14 @@ export const Programs = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Shape Your Future With Veritas Education
+              Shape Your Future With Veritas
+              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                Education
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Explore globally aligned diploma programs built to shape tomorrow’s leaders.
+              Explore globally aligned diploma programs built to shape
+              tomorrow’s leaders.
             </p>
           </motion.div>
         </div>
