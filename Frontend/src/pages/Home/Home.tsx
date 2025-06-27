@@ -150,21 +150,34 @@ export const Home = (): JSX.Element => {
                 nurturing minds that dare to think differently.
               </p>
             </div>
+
+            {/* Image with hover animation */}
             <motion.div
-              className="relative"
+              className="relative group"
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.03 }}
             >
-              <img
+              <motion.img
                 src="src/assests/images/lec_room.jpg"
                 alt="Classroom"
-                className="rounded-xl shadow-lg w-full h-[400px] object-cover"
+                className="rounded-xl shadow-lg w-full h-[400px] object-cover transition-all duration-500"
+                whileHover={{ scale: 1.05 }}
               />
-              <div className="absolute bottom-4 left-4 bg-emerald-600 text-white text-sm px-4 py-2 rounded-full shadow-lg font-semibold">
+
+              {/* Hover-animated badge */}
+              <motion.div
+                className="absolute bottom-4 left-4 bg-emerald-600 text-white text-sm px-4 py-2 rounded-full shadow-lg font-semibold"
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: "0px 0px 12px rgba(16, 185, 129, 0.6)",
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 2024 Founded
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
