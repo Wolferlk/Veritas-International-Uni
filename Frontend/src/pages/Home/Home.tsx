@@ -15,17 +15,17 @@ export const Home = (): JSX.Element => {
     {
       title: "2024",
       subtitle: "Founded",
-      icon: <CalendarIcon size={32} className="text-green-400 mb-2" />,
+      icon: <CalendarIcon size={32} className="mb-2" />,
     },
     {
       title: "100%",
       subtitle: "Innovation Focus",
-      icon: <LightbulbIcon size={32} className="text-green-400 mb-2" />,
+      icon: <LightbulbIcon size={32} className="mb-2" />,
     },
     {
       title: "Global",
       subtitle: "Perspective",
-      icon: <GlobeIcon size={32} className="text-green-400 mb-2" />,
+      icon: <GlobeIcon size={32} className="mb-2" />,
     },
   ];
 
@@ -95,13 +95,15 @@ export const Home = (): JSX.Element => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + idx * 0.2 }}
-                  className="text-center"
+                  className="text-center group cursor-pointer transition-all duration-300"
                 >
-                  <div className="flex justify-center">{stat.icon}</div>
-                  <div className="text-4xl font-bold text-green-400">
+                  <div className="flex justify-center text-green-400 group-hover:text-white transition-colors duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className="text-4xl font-bold text-green-400 group-hover:text-white transition-colors duration-300">
                     {stat.title}
                   </div>
-                  <div className="text-lg text-white tracking-wide">
+                  <div className="text-lg text-white group-hover:text-green-400 tracking-wide transition-colors duration-300">
                     {stat.subtitle}
                   </div>
                 </motion.div>
