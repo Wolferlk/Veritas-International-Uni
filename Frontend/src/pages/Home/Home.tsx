@@ -15,17 +15,17 @@ export const Home = (): JSX.Element => {
     {
       title: "2024",
       subtitle: "Founded",
-      icon: <CalendarIcon size={32} className="text-green-400 mb-2" />,
+      icon: <CalendarIcon size={32} className="mb-2" />,
     },
     {
       title: "100%",
       subtitle: "Innovation Focus",
-      icon: <LightbulbIcon size={32} className="text-green-400 mb-2" />,
+      icon: <LightbulbIcon size={32} className="mb-2" />,
     },
     {
       title: "Global",
       subtitle: "Perspective",
-      icon: <GlobeIcon size={32} className="text-green-400 mb-2" />,
+      icon: <GlobeIcon size={32} className="mb-2" />,
     },
   ];
 
@@ -95,13 +95,15 @@ export const Home = (): JSX.Element => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + idx * 0.2 }}
-                  className="text-center"
+                  className="text-center group cursor-pointer transition-all duration-300"
                 >
-                  <div className="flex justify-center">{stat.icon}</div>
-                  <div className="text-4xl font-bold text-green-400">
+                  <div className="flex justify-center text-green-400 group-hover:text-white transition-colors duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className="text-4xl font-bold text-green-400 group-hover:text-white transition-colors duration-300">
                     {stat.title}
                   </div>
-                  <div className="text-lg text-white tracking-wide">
+                  <div className="text-lg text-white group-hover:text-green-400 tracking-wide transition-colors duration-300">
                     {stat.subtitle}
                   </div>
                 </motion.div>
@@ -150,21 +152,34 @@ export const Home = (): JSX.Element => {
                 nurturing minds that dare to think differently.
               </p>
             </div>
+
+            {/* Image with hover animation */}
             <motion.div
-              className="relative"
+              className="relative group"
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              whileHover={{ scale: 1.03 }}
             >
-              <img
+              <motion.img
                 src="src/assests/images/lec_room.jpg"
                 alt="Classroom"
-                className="rounded-xl shadow-lg w-full h-[400px] object-cover"
+                className="rounded-xl shadow-lg w-full h-[400px] object-cover transition-all duration-500"
+                whileHover={{ scale: 1.05 }}
               />
-              <div className="absolute bottom-4 left-4 bg-emerald-600 text-white text-sm px-4 py-2 rounded-full shadow-lg font-semibold">
+
+              {/* Hover-animated badge */}
+              <motion.div
+                className="absolute bottom-4 left-4 bg-emerald-600 text-white text-sm px-4 py-2 rounded-full shadow-lg font-semibold"
+                whileHover={{
+                  scale: 1.1,
+                  boxShadow: "0px 0px 12px rgba(16, 185, 129, 0.6)",
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 2024 Founded
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -343,7 +358,15 @@ export const Home = (): JSX.Element => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="max-w-4xl mx-auto px-4 text-center bg-green-100 p-10 rounded-3xl shadow-sm">
+        <motion.div
+          className="max-w-4xl mx-auto px-4 text-center bg-green-100 p-10 rounded-3xl shadow-sm"
+          whileHover={{
+            scale: 1.03,
+            y: -5,
+            boxShadow: "0px 12px 25px rgba(34, 197, 94, 0.25)",
+          }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <h2 className="text-4xl font-bold text-green-700 mb-6">
             Future Goals
           </h2>
@@ -353,7 +376,7 @@ export const Home = (): JSX.Element => {
             thus contributing positively to the global education landscape's
             growth and sustainability.
           </p>
-        </div>
+        </motion.div>
       </motion.section>
     </div>
   );
