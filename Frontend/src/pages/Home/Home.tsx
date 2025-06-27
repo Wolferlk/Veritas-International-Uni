@@ -356,7 +356,15 @@ export const Home = (): JSX.Element => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <div className="max-w-4xl mx-auto px-4 text-center bg-green-100 p-10 rounded-3xl shadow-sm">
+        <motion.div
+          className="max-w-4xl mx-auto px-4 text-center bg-green-100 p-10 rounded-3xl shadow-sm"
+          whileHover={{
+            scale: 1.03,
+            y: -5,
+            boxShadow: "0px 12px 25px rgba(34, 197, 94, 0.25)",
+          }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
           <h2 className="text-4xl font-bold text-green-700 mb-6">
             Future Goals
           </h2>
@@ -366,7 +374,7 @@ export const Home = (): JSX.Element => {
             thus contributing positively to the global education landscape's
             growth and sustainability.
           </p>
-        </div>
+        </motion.div>
       </motion.section>
     </div>
   );
