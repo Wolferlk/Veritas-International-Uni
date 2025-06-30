@@ -327,7 +327,7 @@ const ContactPage: React.FC = () => {
                   </p>
                   <button
                     onClick={() => {
-                      const phoneNumber = "0111111111"; // phone number
+                      const phoneNumber = "+94777897901"; // phone number
                       const message =
                         "Hello! I'm interested in learning more about Veritas International University.";
                       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
