@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Star, Wine } from "lucide-react";
 import duty_free from '../../assests/images/duty_free.png';
+import Partners from "../Partners/Partners";
 import partner1 from '../../assests/images/partner1.png';
 import  ship from '../../assests/images/ship.png';
 
@@ -181,6 +182,7 @@ export const Subsidiaries = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
+      <Partners />
     </div>
   );
 };
