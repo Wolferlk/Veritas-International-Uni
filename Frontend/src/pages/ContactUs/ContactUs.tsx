@@ -190,7 +190,7 @@ const ContactPage: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold text-lg">
-                          +94 77 789 7401 / +94 77 678 6371
+                          +94 77 789 7901 / +94 77 678 6371
                         </p>
                         <p className="text-gray-500 text-sm">Call us anytime</p>
                       </div>
