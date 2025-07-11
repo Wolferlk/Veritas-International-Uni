@@ -25,145 +25,6 @@ const levels = [
 const programs = [
   {
     id: 1,
-    title: "Diploma in HR Management",
-    category: "Business",
-    duration: "6 Months",
-    level: "Diploma",
-    students: "1,200+",
-    rating: 4.9,
-    price: "$1,299",
-    image:
-      "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description:
-      "Master human resource management with comprehensive training in recruitment, employee relations, and strategic HR planning.",
-    features: [
-      "Industry Certification",
-      "Career Support",
-      "Flexible Schedule",
-      "Expert Mentorship",
-    ],
-  },
-  {
-    id: 2,
-    title: "BBA in Marketing Management",
-    category: "Business",
-    duration: "48 Months",
-    level: "Bachelor’s",
-    students: "2,500+",
-    rating: 4.8,
-    price: "$2,499",
-    image:
-      "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description:
-      "Drive brand success with creative and data-driven strategies.",
-    features: [
-      "MBA Pathway",
-      "Industry Projects",
-      "Networking Events",
-      "Global Recognition",
-    ],
-  },
-  {
-    id: 3,
-    title: "Digital Marketing Mastery",
-    category: "Technology",
-    duration: "4 Months",
-    level: "Diploma",
-    students: "3,100+",
-    rating: 4.9,
-    price: "$899",
-    image:
-      "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description:
-      "Learn cutting-edge digital marketing strategies including SEO, social media, and data analytics.",
-    features: [
-      "Hands-on Projects",
-      "Google Certified",
-      "Live Campaigns",
-      "Job Guarantee",
-    ],
-  },
-  {
-    id: 4,
-    title: "MBA in International Business management",
-    category: "Business",
-    duration: "8 Months",
-    level: "Master",
-    students: "850+",
-    rating: 4.7,
-    price: "$1,799",
-    image:
-      "https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "Lead across borders with global business acumen.",
-    features: [
-      "Business Focus",
-      "Regulatory Training",
-      "Leadership Skills",
-      "Industry Connections",
-    ],
-  },
-  {
-    id: 5,
-    title:
-      "Bachelor of Systems Engineering Specializing in Information Technology",
-    category: "Technology",
-    duration: "48 Months",
-    level: "Bachelor’s",
-    students: "1,800+",
-    rating: 4.8,
-    price: "$1,599",
-    image:
-      "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "Build digital ecosystems that power tomorrow.",
-    features: [
-      "Portfolio Projects",
-      "Tech Stack Training",
-      "Job Placement",
-      "Mentorship",
-    ],
-  },
-  {
-    id: 6,
-    title: "Diploma in Technology",
-    category: "Technology",
-    duration: "5 Months",
-    level: "Diploma",
-    students: "1,400+",
-    rating: 4.6,
-    price: "$1,199",
-    image:
-      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description:
-      "Creative design program covering branding, digital design, and visual communication.",
-    features: [
-      "Hands-on Projects",
-      "Industry Software",
-      "Job Placement",
-      "Mentorship",
-    ],
-  },
-  {
-    id: 7,
-    title: "Doctor of Business Administration (DBA)",
-    category: "Business",
-    duration: "36 Months",
-    level: "Doctoral",
-    students: "500+",
-    rating: 4.95,
-    price: "$6,999",
-    image:
-      "https://images.pexels.com/photos/3182743/pexels-photo-3182743.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description:
-      " Lead with experience, research, and strategic insight in the world of business.",
-    features: [
-      "Business Focus",
-      "Regulatory Training",
-      "Leadership Skills",
-      "Industry Connections",
-    ],
-  },
-  {
-    id: 8,
     title: "Certified Payroll Management Expert",
     category: "Business",
     duration: "3 Months",
@@ -183,7 +44,7 @@ const programs = [
     ],
   },
   {
-    id: 9,
+    id: 2,
     title: "Certificate in Strategic HR Analytics & Workforce Planning",
     category: "Business",
     duration: "3 Months",
@@ -203,7 +64,7 @@ const programs = [
     ],
   },
   {
-    id: 10,
+    id: 3,
     title: "Certificate in Employer Branding & Talent Acquisition",
     category: "Business",
     duration: "3 Months",
@@ -223,7 +84,7 @@ const programs = [
     ],
   },
   {
-    id: 11,
+    id: 4,
     title: "Professional Certificate in Content Creation",
     category: "Business",
     duration: "3 Months",
@@ -240,72 +101,6 @@ const programs = [
       "SEO & Social Media Strategy",
       "Portfolio Development",
       "Mentorship from Creators",
-    ],
-  },
-  {
-    id: 12,
-    title: "Professional Diploma in Creative Design",
-    category: "Creative",
-    duration: "6 Months",
-    level: "Diploma",
-    students: "1,500+",
-    rating: 4.7,
-    price: "Flexible Payment Plan",
-    mode: "Online Sessions",
-    dates: "Weekends",
-    description:
-      "Develop your creative skills with a professional diploma focusing on design principles, tools, and applications.",
-    image:
-      "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600",
-    features: [
-      "Flexible Payments Plan",
-      "Weekend Classes",
-      "Online Learning",
-      "Industry-Relevant Curriculum",
-    ],
-  },
-  {
-    id: 13,
-    title: "Professional Diploma in Business Administration",
-    category: "Business",
-    duration: "6 Months",
-    level: "Diploma",
-    students: "2,200+",
-    rating: 4.8,
-    price: "Flexible Payment Plan",
-    mode: "Online Sessions",
-    dates: "Weekends",
-    description:
-      "Gain comprehensive knowledge of business administration including management, finance, and operations.",
-    image:
-      "https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg?auto=compress&cs=tinysrgb&w=600",
-    features: [
-      "Flexible Payments Plan",
-      "Weekend Classes",
-      "Online Learning",
-      "Career-Focused Training",
-    ],
-  },
-  {
-    id: 14,
-    title: "Professional Diploma in HR",
-    category: "Business",
-    duration: "6 Months",
-    level: "Diploma",
-    students: "1,800+",
-    rating: 4.9,
-    price: "Flexible Payment Plan",
-    mode: "Online Sessions",
-    dates: "Weekends",
-    description:
-      "Master human resource management with skills in recruitment, employee relations, and organizational development.",
-    image:
-      "https://images.pexels.com/photos/3184290/pexels-photo-3184290.jpeg?auto=compress&cs=tinysrgb&w=600",
-    features: [
-      "Flexible Payments Plan",
-      "Weekend Classes",
-      "Online Learning",
-      "Expert Guidance",
     ],
   },
 ];
