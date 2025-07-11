@@ -178,7 +178,14 @@ const CampusLife = () => {
       {/* Live the Veritas Life Section */}
       <section className="bg-white py-16 md:py-24 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1">
+          {/* Text Section */}
+          <motion.div
+            className="order-2 md:order-1"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               <span className="bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
                 Live the Veritas Life
@@ -191,8 +198,17 @@ const CampusLife = () => {
               extracurricular activities that complement their studies, develop
               leadership skills, and network with industry professionals.
             </p>
-          </div>
-          <div className="order-1 md:order-2 relative">
+          </motion.div>
+
+          {/* Image Section with Hover Animation */}
+          <motion.div
+            className="order-1 md:order-2 relative"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
+          >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video">
               <img
                 src="src/assests/images/lec_room.jpg"
@@ -209,7 +225,16 @@ const CampusLife = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:block">
+
+            {/* Student Satisfaction Card with Hover Animation */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 hidden md:block"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.08, rotate: -1 }}
+              transition={{ duration: 0.4 }}
+              viewport={{ once: true }}
+            >
               <div className="flex items-center gap-2">
                 <div className="bg-purple-100 p-2 rounded-full">
                   <Users className="w-6 h-6 text-purple-600" />
@@ -219,8 +244,8 @@ const CampusLife = () => {
                   <p className="text-sm text-gray-500">Student Satisfaction</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -234,9 +259,21 @@ const CampusLife = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <span className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-full mb-4">
+            <motion.span
+              className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-full mb-4 cursor-pointer"
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              whileHover={{
+                scale: 1.1,
+                rotate: -2,
+                boxShadow: "0px 4px 20px rgba(34, 197, 94, 0.5)",
+              }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              viewport={{ once: true }}
+            >
               EXPLORE POSSIBILITIES
-            </span>
+            </motion.span>
+
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Your Campus Experience
             </h2>
