@@ -136,7 +136,7 @@ const AboutUs: React.FC = () => {
       </section>
 
       {/* Leadership Message Section */}
-      <section className="py-20 bg-white" id="leadership">
+      {/* <section className="py-20 bg-white" id="leadership">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <SlideInLeft className="lg:w-1/2" delay={200}>
@@ -217,7 +217,7 @@ const AboutUs: React.FC = () => {
             </SlideInRight>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mission & Vision Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -393,8 +393,7 @@ const AboutUs: React.FC = () => {
               bodies and international partners worldwide.
             </motion.p>
           </motion.div>
-
-          <motion.div
+          {/* <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -432,7 +431,7 @@ const AboutUs: React.FC = () => {
                     />
                   </motion.div>
                   {/* Uncomment to show partner names */}
-                  {/* <motion.h4
+          {/* <motion.h4
               className="font-bold text-center text-gray-800"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -441,10 +440,11 @@ const AboutUs: React.FC = () => {
             >
               {partner.name}
             </motion.h4> */}
-                </div>
+          {/* </div>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}{" "}
+          */
         </div>
       </section>
 
