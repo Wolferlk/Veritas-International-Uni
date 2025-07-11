@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import partner1 from "../../assests/images/partner1.png";
 import partner2 from "../../assests/images/partner2.png";
 import partner3 from "../../assests/images/partner3.png";
@@ -220,17 +222,45 @@ const AboutUs: React.FC = () => {
       {/* Mission & Vision Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-6">
-          <FadeInUp className="text-center mb-16" delay={100}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-500 to-blue-600 bg-clip-text text-transparent"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
               Our Mission & Vision
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-blue-500 mx-auto rounded-full"></div>
-          </FadeInUp>
+            </motion.h2>
+            <motion.div
+              className="w-24 h-1 bg-gradient-to-r from-green-400 to-blue-500 mx-auto rounded-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: "6rem" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            ></motion.div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            <SlideInLeft delay={300}>
-              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:-translate-y-2 border border-gray-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              whileHover={{ y: -8 }}
+            >
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <motion.div
+                  className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mb-6 mx-auto"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.8 }}
+                >
                   <svg
                     className="w-8 h-8 text-white"
                     fill="none"
@@ -250,25 +280,43 @@ const AboutUs: React.FC = () => {
                       d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
                     ></path>
                   </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                </motion.div>
+                <motion.h3
+                  className="text-2xl font-bold text-center mb-6 text-gray-800"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
                   Our Vision
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-center">
-                  Veritas International Campus offers a wide array of academic
-                  programs designed to suit various interests and career paths.
-                  Our curriculum is both comprehensive and flexible, ensuring
-                  that each student receives the necessary foundation to excel
-                  in their field.To become a global center of academic
-                  excellence, cultivating innovative minds that drive change and
-                  contribute meaningfully to society.
-                </p>
+                </motion.h3>
+                <motion.p
+                  className="text-gray-600 leading-relaxed text-center"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  To become a global center of academic excellence, cultivating
+                  innovative minds that drive change and contribute meaningfully
+                  to society. Our comprehensive and flexible curriculum ensures
+                  each student receives the foundation needed to excel in their
+                  chosen field.
+                </motion.p>
               </div>
-            </SlideInLeft>
+            </motion.div>
 
-            <SlideInRight delay={500}>
-              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:transform hover:-translate-y-2 border border-gray-100">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              whileHover={{ y: -8 }}
+            >
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <motion.div
+                  className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 mx-auto"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.8 }}
+                >
                   <svg
                     className="w-8 h-8 text-white"
                     fill="none"
@@ -282,18 +330,28 @@ const AboutUs: React.FC = () => {
                       d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
                     ></path>
                   </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-center mb-6 text-gray-800">
+                </motion.div>
+                <motion.h3
+                  className="text-2xl font-bold text-center mb-6 text-gray-800"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
                   Our Mission
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-center">
-                  provide a transformative educational experience that empowers
-                  students to realize their full potential, prepares them for
-                  professional success, and instills values of integrity,
-                  responsibility, and compassion
-                </p>
+                </motion.h3>
+                <motion.p
+                  className="text-gray-600 leading-relaxed text-center"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  To provide a transformative educational experience that
+                  empowers students to realize their full potential, prepares
+                  them for professional success, and instills values of
+                  integrity, responsibility, and compassion.
+                </motion.p>
               </div>
-            </SlideInRight>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -301,56 +359,143 @@ const AboutUs: React.FC = () => {
       {/* Accreditations & Partnerships Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <FadeInUp className="text-center mb-16" delay={100}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
               Accreditations & Partnerships
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full"></div>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            </motion.h2>
+            <motion.div
+              className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full"
+              initial={{ width: 0 }}
+              whileInView={{ width: "6rem" }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            ></motion.div>
+            <motion.p
+              className="text-gray-600 mt-4 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               Our commitment to excellence is recognized by leading educational
               bodies and international partners worldwide.
-            </p>
-          </FadeInUp>
+            </motion.p>
+          </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             {partners.map((partner, index) => (
-              <FadeInUp key={partner.id} delay={200 + index * 100}>
-                <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:-translate-y-2 border border-gray-100 group">
-                  <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <img
+              <motion.div
+                key={partner.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  ease: "easeOut",
+                }}
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              >
+                <div className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                  <motion.div
+                    className="w-24 h-24 mx-auto mb-4 flex items-center justify-center"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  >
+                    <motion.img
                       src={partner.image}
                       alt={partner.name}
                       className="w-full h-full object-contain"
+                      initial={{ filter: "grayscale(100%)" }}
+                      whileHover={{
+                        filter: "grayscale(0%)",
+                        transition: { duration: 0.3 },
+                      }}
                     />
-                  </div>
-                  {/* <h4 className="font-bold text-center text-gray-800 group-hover:text-purple-600 transition-colors duration-300">
-                    {partner.name}
-                  </h4> */}
+                  </motion.div>
+                  {/* Uncomment to show partner names */}
+                  {/* <motion.h4
+              className="font-bold text-center text-gray-800"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.2 + index * 0.1 }}
+              whileHover={{ color: "#9333EA" }}
+            >
+              {partner.name}
+            </motion.h4> */}
                 </div>
-              </FadeInUp>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section
         id="contact"
-        className="py-20 bg-gradient-to-br from-indigo-900 to-purple-900"
+        className="py-20 bg-gradient-to-br from-indigo-900 to-purple-900 overflow-hidden"
       >
         <div className="container mx-auto px-6 text-center">
-          <FadeInUp>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold text-white mb-8"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               Ready to Join Our Journey?
-            </h2>
-            <p className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
+            </motion.h2>
+            <motion.p
+              className="text-xl text-indigo-200 mb-8 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               Take the first step towards an exceptional educational experience
               with Veritas International.
-            </p>
-            <button className="bg-white text-indigo-900 font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 hover:transform hover:scale-105 shadow-xl">
-              Get In Touch
-            </button>
-          </FadeInUp>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              >
+                <Link
+                  to="/contact"
+                  className="inline-block bg-white text-indigo-900 font-semibold py-4 px-8 rounded-full hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl"
+                >
+                  Get In Touch
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>
