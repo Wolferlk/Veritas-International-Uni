@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Star, Wine } from "lucide-react";
 import duty_free from '../../assests/images/duty_free.png';
+import Partners from "../Partners/Partners";
 
 export const Subsidiaries = (): JSX.Element => {
   return (
@@ -102,6 +103,7 @@ export const Subsidiaries = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
+      <Partners />
     </div>
   );
 };
