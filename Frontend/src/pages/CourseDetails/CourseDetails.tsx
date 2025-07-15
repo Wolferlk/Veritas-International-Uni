@@ -3,88 +3,125 @@ import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import {
   ClockIcon,
-  CalendarIcon,
   AwardIcon,
   UsersIcon,
   CheckCircleIcon,
   StarIcon,
   PlayIcon,
-  BookOpenIcon,
   TrendingUpIcon,
 } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 
 const courseData = {
-  "diploma-in-hr-management": {
-    title: "Diploma in HR Management",
-    subtitle: "Master Human Resources with Industry-Leading Curriculum",
-    duration: "6 Months",
-    level: "Professional",
-    price: "$1,299",
-    rating: 4.9,
-    students: "1,200+",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
-    description: "Transform your career with our comprehensive HR Management diploma. Learn from industry experts and gain practical skills in recruitment, employee relations, performance management, and strategic HR planning.",
-    features: [
-      "100% Online Learning",
-      "Industry Certification",
-      "Career Support",
-      "Flexible Schedule",
-      "Expert Mentorship",
-      "Real-world Projects"
-    ],
+  "payroll-management": {
+    title: "Certificate in Payroll Management",
+    subtitle: "Master the essentials of payroll processing and compliance",
+    duration: "3 Months",
+    level: "Intermediate",
+    price: "$799",
+    rating: 4.8,
+    students: "850+",
+    image:
+      "https://images.pexels.com/photos/4386322/pexels-photo-4386322.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description:
+      "This course provides a comprehensive understanding of payroll systems, manual and automated processing, and legal compliance, equipping you with practical skills to manage payroll efficiently and accurately.",
     curriculum: [
       {
-        module: "Module 1: HR Fundamentals",
-        topics: ["Introduction to HR", "HR Strategy", "Legal Framework", "Ethics in HR"],
-        duration: "2 weeks"
+        module: "Module 1: Introduction to Payroll Management",
+        topics: [
+          "Overview of payroll systems and functions",
+          "Roles and responsibilities of payroll professionals",
+          "Importance of compliance and accuracy in payroll processing",
+        ],
+        duration: "1 week",
       },
       {
-        module: "Module 2: Recruitment & Selection",
-        topics: ["Job Analysis", "Sourcing Strategies", "Interview Techniques", "Selection Methods"],
-        duration: "3 weeks"
+        module: "Module 2: Manual and Automated Payroll Processing",
+        topics: [
+          "Step-by-step manual payroll process",
+          "Introduction to payroll software and automation tools",
+          "Advantages and challenges of automation",
+        ],
+        duration: "1 week",
       },
       {
-        module: "Module 3: Employee Relations",
-        topics: ["Communication", "Conflict Resolution", "Employee Engagement", "Workplace Culture"],
-        duration: "3 weeks"
+        module: "Module 3: Minimum Wage & Basic Remuneration",
+        topics: [
+          "Understanding minimum wage laws and industry-specific standards",
+          "Calculating basic salary, cost of living adjustments, and statutory allowances",
+        ],
+        duration: "1 week",
       },
       {
-        module: "Module 4: Performance Management",
-        topics: ["Goal Setting", "Performance Reviews", "Feedback Systems", "Improvement Plans"],
-        duration: "3 weeks"
+        module: "Module 4: Computation of Overtime Payments",
+        topics: [
+          "Legal framework and eligibility criteria",
+          "Calculation methods and rates for normal and holiday overtime",
+        ],
+        duration: "1 week",
       },
       {
-        module: "Module 5: Training & Development",
-        topics: ["Learning Needs Analysis", "Training Design", "Delivery Methods", "Evaluation"],
-        duration: "3 weeks"
+        module: "Module 5: Staff Leave & Holiday Payments",
+        topics: [
+          "Types of leave (annual, casual, medical, etc.) and their entitlements",
+          "Payment for public holidays and leave encashment procedures",
+        ],
+        duration: "1 week",
       },
       {
-        module: "Module 6: Strategic HR",
-        topics: ["HR Analytics", "Change Management", "Succession Planning", "Future of HR"],
-        duration: "4 weeks"
-      }
+        module: "Module 6: Authorized Deductions",
+        topics: [
+          "Statutory and non-statutory deductions",
+          "Legal considerations and employee consent",
+        ],
+        duration: "1 week",
+      },
+      {
+        module: "Module 7: EPF & ETF Contributions",
+        topics: [
+          "Eligibility and contribution rates",
+          "Employer vs. employee responsibilities",
+          "Payment timelines and compliance reporting",
+        ],
+        duration: "1 week",
+      },
+      {
+        module: "Module 8: EPF/ETF Registration & Compliance",
+        topics: [
+          "Registration procedures for employers and employees",
+          "Common challenges and compliance best practices",
+        ],
+        duration: "1 week",
+      },
     ],
     requirements: [
-      "High school diploma or equivalent",
-      "Basic computer literacy",
+      "Basic understanding of accounting",
       "English proficiency",
-      "Commitment to 10-15 hours per week"
+      "Computer literacy",
+      "Commitment to 5-10 hours per week",
     ],
     outcomes: [
+      "Payroll Officer",
+      "HR & Payroll Executive",
+      "Compensation Analyst",
+      "Payroll Administrator",
       "HR Assistant",
-      "HR Executive",
-      "Recruitment Specialist",
-      "Training Coordinator",
-      "HR Manager"
-    ]
-  }
+    ],
+    features: [
+      "Hands-on training with real-world payroll software",
+      "Expert instructors with industry experience",
+      "Flexible online learning with lifetime access",
+      "Certificate of completion recognized by employers",
+    ],
+  },
 };
 
 export const CourseDetails = (): JSX.Element => {
   const { id } = useParams();
-  const course = courseData[id as keyof typeof courseData] || courseData["diploma-in-hr-management"];
+  const course =
+    courseData[id as keyof typeof courseData] ||
+    courseData["payroll-management"];
 
   return (
     <div className="pt-20">
@@ -103,7 +140,7 @@ export const CourseDetails = (): JSX.Element => {
               <p className="text-xl text-white/90 mb-6 leading-relaxed">
                 {course.subtitle}
               </p>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="flex items-center space-x-2">
                   <ClockIcon className="w-5 h-5" />
@@ -124,20 +161,18 @@ export const CourseDetails = (): JSX.Element => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="flex flex-col sm:flex-row gap-4"
                 >
-                  Enroll Now - {course.price}
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold rounded-full"
-                >
-                  <PlayIcon className="w-5 h-5 mr-2" />
-                  Watch Preview
-                </Button>
+                  <Button
+                    size="lg"
+                    className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
+                  >
+                    Enroll Now - {course.price}
+                  </Button>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -153,14 +188,7 @@ export const CourseDetails = (): JSX.Element => {
                     alt={course.title}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <Button
-                      size="lg"
-                      className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full w-16 h-16 p-0"
-                    >
-                      <PlayIcon className="w-8 h-8" />
-                    </Button>
-                  </div>
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center"></div>
                 </div>
                 <CardContent className="p-6 bg-white">
                   <div className="text-center">
@@ -171,7 +199,8 @@ export const CourseDetails = (): JSX.Element => {
                       Professional Certificate
                     </h3>
                     <p className="text-gray-600">
-                      Earn a recognized diploma that enhances your career prospects
+                      Earn a recognized diploma that enhances your career
+                      prospects
                     </p>
                   </div>
                 </CardContent>
@@ -221,7 +250,10 @@ export const CourseDetails = (): JSX.Element => {
                 </h3>
                 <div className="space-y-4">
                   {course.curriculum.map((module, index) => (
-                    <Card key={index} className="border border-gray-200 hover:shadow-lg transition-shadow">
+                    <Card
+                      key={index}
+                      className="border border-gray-200 hover:shadow-lg transition-shadow"
+                    >
                       <CardContent className="p-6">
                         <div className="flex items-center justify-between mb-3">
                           <h4 className="text-lg font-semibold text-gray-900">
@@ -266,7 +298,9 @@ export const CourseDetails = (): JSX.Element => {
                       {course.requirements.map((requirement, index) => (
                         <li key={index} className="flex items-start space-x-3">
                           <CheckCircleIcon className="w-5 h-5 text-teal-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{requirement}</span>
+                          <span className="text-gray-700 text-sm">
+                            {requirement}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -290,7 +324,9 @@ export const CourseDetails = (): JSX.Element => {
                       {course.outcomes.map((outcome, index) => (
                         <li key={index} className="flex items-start space-x-3">
                           <TrendingUpIcon className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700 text-sm">{outcome}</span>
+                          <span className="text-gray-700 text-sm">
+                            {outcome}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -311,7 +347,9 @@ export const CourseDetails = (): JSX.Element => {
                     <p className="text-white/90 mb-4">
                       Join {course.students} students who have already enrolled
                     </p>
-                    <div className="text-3xl font-bold mb-4">{course.price}</div>
+                    <div className="text-3xl font-bold mb-4">
+                      {course.price}
+                    </div>
                     <Button
                       size="lg"
                       className="w-full bg-white text-teal-600 hover:bg-gray-100 font-semibold"
