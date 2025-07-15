@@ -14,7 +14,6 @@ import {
 import emailjs from "@emailjs/browser";
 
 const ContactPage: React.FC = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
   const [isHovered, setIsHovered] = useState<string | null>(null);
 
   const form = useRef<HTMLFormElement>(null);
@@ -191,7 +190,7 @@ const ContactPage: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-gray-800 font-semibold text-lg">
-                          +94 77 789 7401 / +94 77 678 6371
+                          +94 77 789 7901 / +94 77 678 6371
                         </p>
                         <p className="text-gray-500 text-sm">Call us anytime</p>
                       </div>
@@ -327,7 +326,15 @@ const ContactPage: React.FC = () => {
                     WhatsApp chat
                   </p>
                   <button
-                    onClick={() => setIsChatOpen(!isChatOpen)}
+                    onClick={() => {
+                      const phoneNumber = "+94777897901"; // phone number
+                      const message =
+                        "Hello! I'm interested in learning more about Veritas International University.";
+                      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                        message
+                      )}`;
+                      window.open(whatsappUrl, "_blank");
+                    }}
                     className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 px-6 rounded-xl transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 active:scale-95"
                   >
                     <span className="flex items-center justify-center space-x-2">
