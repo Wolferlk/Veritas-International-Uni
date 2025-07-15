@@ -62,8 +62,9 @@ export const Home = (): JSX.Element => {
               </span>
             </motion.h1>
 
+            {/* FIXED PARAGRAPH BLOCK */}
             <motion.p
-              className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
+              className="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto px-4 py-3"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -122,63 +123,85 @@ export const Home = (): JSX.Element => {
         viewport={{ once: true }}
       >
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-teal-700 mb-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-teal-700 mb-12 text-center">
             Welcome to Veritas International Campus
           </h2>
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+
+          <div className="grid md:grid-cols-2 gap-10 items-start">
             <div>
-              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-                Veritas International Campus, as a bold and passionate start-up
-                in the field of higher education, we are driven by a singular
-                mission: to shape future-ready individuals through academic
-                excellence, innovation, and real-world relevance.
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                <strong className="text-teal-600">
+                  Veritas International Campus
+                </strong>
+                , as a bold and passionate start-up in the field of higher
+                education, is driven by a singular mission: to shape
+                future-ready individuals through academic excellence,
+                innovation, and real-world relevance.
               </p>
-              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-                Founded with a deep belief in the power of education to unlock
-                human potential, Veritas International Campus is going to offer
-                a range of academic programs designed to equip students with the
-                knowledge, skills, and global perspective they need to thrive in
-                a rapidly evolving world. Even being a start up, our programs
-                are built not only to meet the standards of today’s educational
-                landscape but to anticipate the demands of tomorrow’s
-                industries.
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                Founded on the belief that education unlocks human potential, we
+                offer programs designed to equip students with global
+                perspective and skills needed to thrive in a rapidly evolving
+                world.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed">
-                As a young and evolving institution, we embrace the agility,
-                creativity, and courage that define start-ups. We are not bound
-                by convention — we are inspired by possibility. Every course,
-                every collaboration, and every initiative at Veritas is crafted
-                with purpose, with a commitment to pushing boundaries and
-                nurturing minds that dare to think differently.
+                We embrace{" "}
+                <span className="font-semibold text-teal-600">agility</span>,{" "}
+                <span className="font-semibold text-teal-600">creativity</span>,
+                and <span className="font-semibold text-teal-600">courage</span>
+                . Every initiative at Veritas is crafted with purpose, pushing
+                boundaries and nurturing minds that dare to think differently.
               </p>
             </div>
 
-            {/* Image with hover animation */}
+            {/* Animated Highlighted Values */}
             <motion.div
-              className="relative group"
-              initial={{ scale: 0.9, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              className="space-y-6"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.03 }}
             >
-              <motion.img
-                src="src/assests/images/lec_room.jpg"
-                alt="Classroom"
-                className="rounded-xl shadow-lg w-full h-[400px] object-cover transition-all duration-500"
-                whileHover={{ scale: 1.05 }}
-              />
-
-              {/* Hover-animated badge */}
               <motion.div
-                className="absolute bottom-4 left-4 bg-emerald-600 text-white text-sm px-4 py-2 rounded-full shadow-lg font-semibold"
-                whileHover={{
-                  scale: 1.1,
-                  boxShadow: "0px 0px 12px rgba(16, 185, 129, 0.6)",
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
+                className="p-6 bg-white shadow-lg rounded-xl border-l-4 border-teal-500"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.4 }}
               >
-                2024 Founded
+                <h3 className="text-xl font-semibold text-teal-700 mb-2">
+                  🎓 Academic Excellence
+                </h3>
+                <p className="text-gray-600">
+                  Programs aligned with future industry standards and global
+                  challenges.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="p-6 bg-white shadow-lg rounded-xl border-l-4 border-orange-400"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.4 }}
+              >
+                <h3 className="text-xl font-semibold text-orange-600 mb-2">
+                  💡 Innovation-Driven
+                </h3>
+                <p className="text-gray-600">
+                  A start-up mindset encourages out-of-the-box thinking and
+                  experimentation.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="p-6 bg-white shadow-lg rounded-xl border-l-4 border-green-500"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.4 }}
+              >
+                <h3 className="text-xl font-semibold text-green-600 mb-2">
+                  🌍 Real-World Relevance
+                </h3>
+                <p className="text-gray-600">
+                  Bridging theory with hands-on learning for career-ready
+                  graduates.
+                </p>
               </motion.div>
             </motion.div>
           </div>
