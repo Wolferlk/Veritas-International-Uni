@@ -110,7 +110,7 @@ export const Register = (): JSX.Element => {
             transition={{ duration: 0.8 }}
           >
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLScwNpvd5c1zwZq-sPs0Lkip7LmUtgKc2s8weVJC_ySDdvfGeQ/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfWTqCLfNMFhZlpsLAojFC_8o1DaPKU9IzQ13M2xoQdDmHLRA/viewform?embedded=true"
               width="140%"
               height="1600"
               frameBorder="0"
