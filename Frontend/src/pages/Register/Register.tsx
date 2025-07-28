@@ -111,14 +111,11 @@ export const Register = (): JSX.Element => {
           >
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSfWTqCLfNMFhZlpsLAojFC_8o1DaPKU9IzQ13M2xoQdDmHLRA/viewform?embedded=true"
-              width="140%"
-              height="1600"
+              width="1990"
+              height="2000"
               frameBorder="0"
-              marginHeight={0}
-              marginWidth={0}
-              className="rounded-lg shadow-xl bg-white"
-              title="Registration Form"
-              style={{ minHeight: 700, display: 'block', marginLeft: 'auto', marginRight: 'auto' }}
+              marginHeight="0"
+              marginWidth="0"
             >
               Loading…
             </iframe>
