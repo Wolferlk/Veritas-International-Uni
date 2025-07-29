@@ -11,7 +11,7 @@ import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 
 // Filters
-const categories = ["All", "Business", "Technology", "Healthcare", "Creative"];
+const categories = ["All", "Business", "Technology", "Healthcare", "Creative", "Language"];
 const levels = [
   "All",
   "Diploma",
@@ -101,6 +101,26 @@ const programs = [
       "SEO & Social Media Strategy",
       "Portfolio Development",
       "Mentorship from Creators",
+    ],
+  },
+  {
+    id: 5,
+    title: "Diploma in English",
+    category: "Language",
+    duration: "6 Months",
+    level: "Diploma",
+    students: "1200+",
+    rating: 4.8,
+    price: "$499",
+    image:
+      "https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description:
+      "Enhance your English language skills in grammar, vocabulary, and communication with this comprehensive diploma ideal for students and professionals.",
+    features: [
+      "Grammar & Vocabulary Mastery",
+      "Spoken & Written Communication",
+      "Interactive Online Lessons",
+      "Diploma Certificate upon Completion",
     ],
   },
 ];
