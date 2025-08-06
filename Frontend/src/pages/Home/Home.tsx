@@ -33,38 +33,65 @@ export const Home = (): JSX.Element => {
     <div className="pt-20">
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://www.gcc.edu/Portals/0/Images/1.3.2-campus_life-body-3-0723.jpg?ver=e2CLlzBj5mDL04ofjiiCGw%3D%3D')",
-        }}
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        {/* Green Tint Overlay */}
-        <div className="absolute inset-0 bg-emerald-800/30" />
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover filter blur-sm brightness-50 contrast-125"
+            style={{
+              filter: 'blur(2px) brightness(0.4) contrast(1.3)',
+            }}
+          >
+            <source
+              src="https://media.istockphoto.com/id/1302273587/video/laptop-on-a-table-at-the-end-of-an-aisle-of-books-in-a-library.mp4?s=mp4-640x640-is&k=20&c=HERTtG3ibKF0poAWZ8NrgIPbph1408m0jYwVOhS8mIM="
+              type="video/mp4"
+            />
+            {/* Fallback image in case video doesn't load */}
+            <div
+              className="w-full h-full bg-cover bg-center"
+              style={{
+                backgroundImage:
+                  "url('https://www.gcc.edu/Portals/0/Images/1.3.2-campus_life-body-3-0723.jpg?ver=e2CLlzBj5mDL04ofjiiCGw%3D%3D')",
+              }}
+            />
+          </video>
+        </div>
+
+        {/* Enhanced Overlay with Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/40 via-teal-800/30 to-green-900/50" />
+        
+        {/* Additional Dark Overlay for Better Text Readability */}
+        <div className="absolute inset-0 bg-black/20" />
 
         {/* Blurred Circle Decorations */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-emerald-300/10 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-teal-400/5 rounded-full blur-3xl animate-pulse delay-500" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center">
             <motion.h1
-              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               Veritas International
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent drop-shadow-lg">
                 Campus
               </span>
             </motion.h1>
 
             {/* FIXED PARAGRAPH BLOCK */}
             <motion.p
-              className="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto px-4 py-3"
+              className="text-xl md:text-2xl text-white mb-10 max-w-3xl mx-auto px-4 py-3 drop-shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -96,15 +123,15 @@ export const Home = (): JSX.Element => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 + idx * 0.2 }}
-                  className="text-center group cursor-pointer transition-all duration-300"
+                  className="text-center group cursor-pointer transition-all duration-300 backdrop-blur-sm bg-white/5 p-4 rounded-lg border border-white/10"
                 >
-                  <div className="flex justify-center text-green-400 group-hover:text-white transition-colors duration-300">
+                  <div className="flex justify-center text-green-400 group-hover:text-white transition-colors duration-300 drop-shadow-lg">
                     {stat.icon}
                   </div>
-                  <div className="text-4xl font-bold text-green-400 group-hover:text-white transition-colors duration-300">
+                  <div className="text-4xl font-bold text-green-400 group-hover:text-white transition-colors duration-300 drop-shadow-lg">
                     {stat.title}
                   </div>
-                  <div className="text-lg text-white group-hover:text-green-400 tracking-wide transition-colors duration-300">
+                  <div className="text-lg text-white group-hover:text-green-400 tracking-wide transition-colors duration-300 drop-shadow-md">
                     {stat.subtitle}
                   </div>
                 </motion.div>
