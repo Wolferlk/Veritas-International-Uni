@@ -211,7 +211,7 @@ const CampusLife = () => {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video">
               <img
-                src="https://i.ibb.co/fdkPnLhL/1754983324936.jpg"
+                src="https://i.ibb.co/Kjr32XFG/1754983324936.jpg"
                 alt="Students collaborating on campus"
                 className="w-full h-full object-cover"
               />
