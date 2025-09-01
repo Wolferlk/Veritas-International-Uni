@@ -416,7 +416,7 @@ const CampusLife = () => {
           {/* Classroom Images Gallery */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
-              "src/assests/images/classroom1.jpeg",
+              "https://i.ibb.co/84rgswqT/cls1.png",
               "src/assests/images/classroom2.jpeg",
               "src/assests/images/classroom3.jpeg",
               "src/assests/images/classroom4.jpeg",
