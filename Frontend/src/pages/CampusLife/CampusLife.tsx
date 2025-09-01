@@ -417,10 +417,10 @@ const CampusLife = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               "https://i.ibb.co/84rgswqT/cls1.png",
-              "src/assests/images/classroom2.jpeg",
-              "src/assests/images/classroom3.jpeg",
-              "src/assests/images/classroom4.jpeg",
-              "src/assests/images/classroom5.jpeg",
+              "https://i.ibb.co/W4m9w4g2/cls2.png",
+              "https://i.ibb.co/CsHmZMQZ/cls3.png",
+              "https://i.ibb.co/pBr2vdfK/cls4.png",
+              "https://i.ibb.co/rKTwn8HQ/cls5.png",
             ].map((src, index) => (
               <motion.div
                 key={index}
