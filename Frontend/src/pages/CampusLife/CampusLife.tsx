@@ -420,7 +420,7 @@ const CampusLife = () => {
               "https://i.ibb.co/W4m9w4g2/cls2.png",
               "https://i.ibb.co/CsHmZMQZ/cls3.png",
               "https://i.ibb.co/pBr2vdfK/cls4.png",
-              "https://i.ibb.co/x85brcZf/des5.jpg",
+              "https://i.ibb.co/CpRdCryG/des5new.png",
             ].map((src, index) => (
               <motion.div
                 key={index}
