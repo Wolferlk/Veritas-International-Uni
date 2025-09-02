@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Star, Wine } from "lucide-react";
-import duty_free from '../../assests/images/duty_free.png';
+import duty_free from "../../assests/images/duty_free.png";
 import Partners from "../Partners/Partners";
-import partner1 from '../../assests/images/partner1.png';
-import  ship from '../../assests/images/ship.png';
+import partner1 from "../../assests/images/partner1.png";
+import ship from "../../assests/images/ship.png";
 
 export const Subsidiaries = (): JSX.Element => {
   return (
@@ -22,7 +22,8 @@ export const Subsidiaries = (): JSX.Element => {
               Subsidiaries
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Discover our diverse portfolio of companies dedicated to excellence in retail and education.
+              Discover our diverse portfolio of companies dedicated to
+              excellence in retail and education.
             </p>
           </motion.div>
         </div>
@@ -56,8 +57,10 @@ export const Subsidiaries = (): JSX.Element => {
                 located in the prestigious Colombo Port
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Experience our exclusive duty-free wine store at Colombo Port, offering a curated selection of
-                premium wines and spirits from around the world. Perfect for travelers seeking quality beverages at competitive prices.
+                Experience our exclusive duty-free wine store at Colombo Port,
+                offering a curated selection of premium wines and spirits from
+                around the world. Perfect for travelers seeking quality
+                beverages at competitive prices.
               </p>
 
               <div className="flex items-center gap-4 text-gray-700 mb-3">
@@ -82,7 +85,8 @@ export const Subsidiaries = (): JSX.Element => {
                     </h4>
                   </div>
                   <p className="text-sm text-gray-600">
-                    Curated collection of fine wines and spirits from renowned vineyards worldwide.
+                    Curated collection of fine wines and spirits from renowned
+                    vineyards worldwide.
                   </p>
                 </motion.div>
 
@@ -97,7 +101,8 @@ export const Subsidiaries = (): JSX.Element => {
                     </h4>
                   </div>
                   <p className="text-sm text-gray-600">
-                    Enjoy tax-free shopping with competitive pricing exclusive to our port location.
+                    Enjoy tax-free shopping with competitive pricing exclusive
+                    to our port location.
                   </p>
                 </motion.div>
               </div>
@@ -129,7 +134,12 @@ export const Subsidiaries = (): JSX.Element => {
                 </span>
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Veritas International Pvt Ltd is a premier ship chandling company dedicated to providing exceptional services to the maritime industry. With its headquarters strategically located in Sri Lanka, Veritas International has grown to become a trusted partner for ship owners, operators, and managers across the globe.
+                Veritas International Pvt Ltd is a premier ship chandling
+                company dedicated to providing exceptional services to the
+                maritime industry. With its headquarters strategically located
+                in Sri Lanka, Veritas International has grown to become a
+                trusted partner for ship owners, operators, and managers across
+                the globe.
               </p>
 
               <div className="flex items-center gap-4 text-gray-700 mb-3">
@@ -141,10 +151,23 @@ export const Subsidiaries = (): JSX.Element => {
                 +94 (71) 646 4746
               </div>
               <div className="flex items-center gap-4 text-gray-700 mb-6">
-                <svg className="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v1a4 4 0 01-8 0v-1m8 0V9a4 4 0 00-8 0v3" /></svg>
+                <svg
+                  className="w-5 h-5 text-emerald-500"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M16 12H8m8 0a4 4 0 11-8 0 4 4 0 018 0zm0 0v1a4 4 0 01-8 0v-1m8 0V9a4 4 0 00-8 0v3"
+                  />
+                </svg>
                 info.veritasinternational@gmail.com
               </div>
 
+              
               {/* Feature Highlights */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <motion.div
@@ -158,7 +181,11 @@ export const Subsidiaries = (): JSX.Element => {
                     </h4>
                   </div>
                   <p className="text-sm text-gray-600 whitespace-pre-line">
-                    To revolutionize the maritime industry by setting the standard for excellence in service, innovation, and sustainability, fostering long-term partnerships and creating a safer, more efficient, and environmentally responsible future for maritime operations.
+                    To revolutionize the maritime industry by setting the
+                    standard for excellence in service, innovation, and
+                    sustainability, fostering long-term partnerships and
+                    creating a safer, more efficient, and environmentally
+                    responsible future for maritime operations.
                   </p>
                 </motion.div>
 
@@ -168,13 +195,24 @@ export const Subsidiaries = (): JSX.Element => {
                 >
                   <div className="flex items-center gap-3 mb-2">
                     {/* Flag icon for Mission */}
-                    <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 22V4a2 2 0 0 1 2-2h11.5a1.5 1.5 0 0 1 0 3H6"/><path d="M6 6h13a1 1 0 0 1 0 2H6"/></svg>
+                    <svg
+                      className="w-5 h-5 text-green-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M4 22V4a2 2 0 0 1 2-2h11.5a1.5 1.5 0 0 1 0 3H6" />
+                      <path d="M6 6h13a1 1 0 0 1 0 2H6" />
+                    </svg>
                     <h4 className="font-semibold text-gray-800 text-lg">
                       MISSION
                     </h4>
                   </div>
                   <p className="text-sm text-gray-600 whitespace-pre-line">
-                    To be the premier partner for maritime vessels, delivering unparalleled service, high-quality products, and dependable support to ensure seamless operations and ultimate client satisfaction.
+                    To be the premier partner for maritime vessels, delivering
+                    unparalleled service, high-quality products, and dependable
+                    support to ensure seamless operations and ultimate client
+                    satisfaction.
                   </p>
                 </motion.div>
               </div>
