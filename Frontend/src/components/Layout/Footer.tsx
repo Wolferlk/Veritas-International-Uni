@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   FacebookIcon,
-  TwitterIcon,
   InstagramIcon,
   LinkedinIcon,
   YoutubeIcon,
@@ -30,7 +29,6 @@ const footerLinks = {
 
 const socialLinks = [
   { icon: FacebookIcon, href: "https://www.facebook.com/share/1GdEo1YHuw/?mibextid=wwXIfr", label: "Facebook" },
-  { icon: TwitterIcon, href: "#", label: "Twitter" },
   { icon: InstagramIcon, href: "https://instagram.com/veritasinternationalcampus/p/DGM7D7Ph9tA", label: "Instagram" },
   { icon: LinkedinIcon, href: "https://linkedin.com/showcase/veritas-international-campus", label: "LinkedIn" },
   { icon: YoutubeIcon, href: "https://youtube.com/@veritasinternationalcampus?si=BVPTWVPySXHx5PDP", label: "YouTube" },
