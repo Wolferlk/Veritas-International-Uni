@@ -18,8 +18,10 @@ const testimonials = [
     program: "Diploma in HR Management",
     year: "2023",
     rating: 5,
-    image: "https://scontent.fcmb11-1.fna.fbcdn.net/v/t39.30808-6/481064424_975522307869805_4245356682554613524_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHt2p2seXdDWT8pyokqPm9DixH8xXjY792LEfzFeNjv3ZP2NtQFq6ie_T2cGy7wsPs6ewY7XEohKIKiYKQoyq3X&_nc_ohc=KLOs-OXcxVEQ7kNvwG0I9DT&_nc_oc=Adku-ipFcopwMkJfQEeds6L9dhC_yUPWhn_vw729qzxCJ4V-SxGKjFktKqvbNprh71HguBIXA5BT53YuSDA0sY-d&_nc_zt=23&_nc_ht=scontent.fcmb11-1.fna&_nc_gid=ErDMWYjkF6ZvhLy25ZUP9A&oh=00_AfOTFi628LYbRroo6D8xa13btmadsPoOAdBsGgwcEZmAtw&oe=68602FC8",
-    quote: "If you're looking for a place that blends academic excellence with real-world relevance,Veritas International Campus is the answer. An unforgettable and empowering experience !",
+    image:
+      "https://scontent.fcmb11-1.fna.fbcdn.net/v/t39.30808-6/481064424_975522307869805_4245356682554613524_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHt2p2seXdDWT8pyokqPm9DixH8xXjY792LEfzFeNjv3ZP2NtQFq6ie_T2cGy7wsPs6ewY7XEohKIKiYKQoyq3X&_nc_ohc=KLOs-OXcxVEQ7kNvwG0I9DT&_nc_oc=Adku-ipFcopwMkJfQEeds6L9dhC_yUPWhn_vw729qzxCJ4V-SxGKjFktKqvbNprh71HguBIXA5BT53YuSDA0sY-d&_nc_zt=23&_nc_ht=scontent.fcmb11-1.fna&_nc_gid=ErDMWYjkF6ZvhLy25ZUP9A&oh=00_AfOTFi628LYbRroo6D8xa13btmadsPoOAdBsGgwcEZmAtw&oe=68602FC8",
+    quote:
+      "If you're looking for a place that blends academic excellence with real-world relevance,Veritas International Campus is the answer. An unforgettable and empowering experience !",
     achievement: "HR Manager at Tech Solutions Inc.",
     video: true,
   },
@@ -29,8 +31,10 @@ const testimonials = [
     program: "Web Development Bootcamp",
     year: "2023",
     rating: 5,
-    image: "https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-1/475191292_951434463759038_7947299757402528946_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFCyY7Hg-MYlj-_0qIc3vGmKxMITyLyd1grEwhPIvJ3WFogFseSpiJFr_dMU0i9Z3CYBZoHMWocIb5_JH7hqbcZ&_nc_ohc=npYiGkseLX0Q7kNvwGR8tbo&_nc_oc=AdnXrRJkBegV-Y5P02S8668DSrsxWu7qaesPC9KtA18gUND52Pyhb_ugs0XAwcqYCF-wzFvOhQGVerx0Q_d7AEp4&_nc_zt=24&_nc_ht=scontent.fcmb11-2.fna&_nc_gid=RV6B8R2owp5mzbmXSG8xUw&oh=00_AfNz38W62YIT10Hw6OX_QR3Uhl_DOGqEqdfqc6L1RvAClA&oe=686023B0",
-    quote: "At Veritas International Campus, I found not just education, but inspiration. The faculty, facilities, and community truly empoer students to reach their fullest potential.",
+    image:
+      "https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-1/475191292_951434463759038_7947299757402528946_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeFCyY7Hg-MYlj-_0qIc3vGmKxMITyLyd1grEwhPIvJ3WFogFseSpiJFr_dMU0i9Z3CYBZoHMWocIb5_JH7hqbcZ&_nc_ohc=npYiGkseLX0Q7kNvwGR8tbo&_nc_oc=AdnXrRJkBegV-Y5P02S8668DSrsxWu7qaesPC9KtA18gUND52Pyhb_ugs0XAwcqYCF-wzFvOhQGVerx0Q_d7AEp4&_nc_zt=24&_nc_ht=scontent.fcmb11-2.fna&_nc_gid=RV6B8R2owp5mzbmXSG8xUw&oh=00_AfNz38W62YIT10Hw6OX_QR3Uhl_DOGqEqdfqc6L1RvAClA&oe=686023B0",
+    quote:
+      "At Veritas International Campus, I found not just education, but inspiration. The faculty, facilities, and community truly empoer students to reach their fullest potential.",
     achievement: "Full-Stack Developer & Entrepreneur",
     video: false,
   },
@@ -40,11 +44,13 @@ const testimonials = [
     program: "Digital Marketing Mastery",
     year: "2024",
     rating: 5,
-    image: "https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-1/509258301_702355025912370_7885668384160660497_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeFtjJ0zs5iOpLj77RDzc3iGbr1hj34R9oJuvWGPfhH2gpErccKUbjexh6ZnOk4Gm1SItFsB1Z7XlkDEAkduhY2m&_nc_ohc=N2crDBM7KvQQ7kNvwEYi_LN&_nc_oc=AdmyQ8AqDr5ZP77VOibhXqdJiCU2n_i3zFDZPzg1tm0BvsDfv1Va4Z1OHWc_3WgTj0tSefHzCkTSOaVqWFN5fXYh&_nc_zt=24&_nc_ht=scontent.fcmb11-2.fna&_nc_gid=nyj4YfcKiDrEoCYSwnTnyw&oh=00_AfMKhhw6bhxRRc-ftxvBgvM406d1hWEDmeTHt7xcbzh-AQ&oe=6860330C",
-    quote: "Veristas International Campus has been a game-changer on my academic journey. Their expert guidance, reliable support, and dedication to student success make them the gold standard in international education services.From the first interaction to the final steps, Veritas International Campus has shown exceptional professionalism and care.Their personalized approach and top-tier service make them a trusted partner for and student aiming high.",
+    image:
+      "https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-1/509258301_702355025912370_7885668384160660497_n.jpg?stp=cp6_dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=1d2534&_nc_eui2=AeFtjJ0zs5iOpLj77RDzc3iGbr1hj34R9oJuvWGPfhH2gpErccKUbjexh6ZnOk4Gm1SItFsB1Z7XlkDEAkduhY2m&_nc_ohc=N2crDBM7KvQQ7kNvwEYi_LN&_nc_oc=AdmyQ8AqDr5ZP77VOibhXqdJiCU2n_i3zFDZPzg1tm0BvsDfv1Va4Z1OHWc_3WgTj0tSefHzCkTSOaVqWFN5fXYh&_nc_zt=24&_nc_ht=scontent.fcmb11-2.fna&_nc_gid=nyj4YfcKiDrEoCYSwnTnyw&oh=00_AfMKhhw6bhxRRc-ftxvBgvM406d1hWEDmeTHt7xcbzh-AQ&oe=6860330C",
+    quote:
+      "Veristas International Campus has been a game-changer on my academic journey. Their expert guidance, reliable support, and dedication to student success make them the gold standard in international education services.From the first interaction to the final steps, Veritas International Campus has shown exceptional professionalism and care.Their personalized approach and top-tier service make them a trusted partner for and student aiming high.",
     achievement: "Digital Marketing Consultant",
     video: true,
-  }
+  },
 ];
 
 const stats = [
@@ -58,23 +64,40 @@ export const StudentTestimonials = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Business", "Technology", "Creative", "Healthcare"];
+  const categories = [
+    "All",
+    "Business",
+    "Technology",
+    "Creative",
+    "Healthcare",
+  ];
 
-  const filteredTestimonials = selectedCategory === "All"
-    ? testimonials
-    : testimonials.filter(testimonial =>
-      testimonial.program.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-      (selectedCategory === "Technology" && (testimonial.program.includes("Web Development") || testimonial.program.includes("Digital Marketing"))) ||
-      (selectedCategory === "Creative" && testimonial.program.includes("Graphic Design")) ||
-      (selectedCategory === "Healthcare" && testimonial.program.includes("Healthcare"))
-    );
+  const filteredTestimonials =
+    selectedCategory === "All"
+      ? testimonials
+      : testimonials.filter(
+          (testimonial) =>
+            testimonial.program
+              .toLowerCase()
+              .includes(selectedCategory.toLowerCase()) ||
+            (selectedCategory === "Technology" &&
+              (testimonial.program.includes("Web Development") ||
+                testimonial.program.includes("Digital Marketing"))) ||
+            (selectedCategory === "Creative" &&
+              testimonial.program.includes("Graphic Design")) ||
+            (selectedCategory === "Healthcare" &&
+              testimonial.program.includes("Healthcare"))
+        );
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
+    setCurrentIndex(
+      (prev) =>
+        (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length
+    );
   };
 
   const navigate = useNavigate();
@@ -96,7 +119,6 @@ export const StudentTestimonials = (): JSX.Element => {
                 Success Stories
               </span>
             </h1>
-
           </motion.div>
         </div>
       </section>
@@ -284,18 +306,23 @@ export const StudentTestimonials = (): JSX.Element => {
                         className="w-12 h-12 rounded-full object-cover mr-4"
                       />
                       <div>
-                        <h3 className="font-bold text-gray-900">{testimonial.name}</h3>
-                        <p className="text-sm text-gray-600">{testimonial.program}</p>
+                        <h3 className="font-bold text-gray-900">
+                          {testimonial.name}
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          {testimonial.program}
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center mb-3">
                       {[...Array(5)].map((_, i) => (
                         <StarIcon
                           key={i}
-                          className={`w-4 h-4 ${i < testimonial.rating
-                            ? "text-yellow-400 fill-current"
-                            : "text-gray-300"
-                            }`}
+                          className={`w-4 h-4 ${
+                            i < testimonial.rating
+                              ? "text-yellow-400 fill-current"
+                              : "text-gray-300"
+                          }`}
                         />
                       ))}
                     </div>
@@ -326,30 +353,67 @@ export const StudentTestimonials = (): JSX.Element => {
               Ready to Write Your Success Story?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join our community of successful graduates and transform your career
-              with our world-class programs.
+              Join our community of successful graduates and transform your
+              career with our world-class programs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
                 className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
-                onClick={() => navigate('/register')}
+                style={{ opacity: 1, visibility: "visible" }} // Add this style for visibility
+                onClick={() => navigate("/register")}
               >
                 Apply Now
               </Button>
+
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 text-lg font-semibold rounded-full"
-                onClick={() => window.location.href = 'tel:+94777897901'}
+                onClick={() => (window.location.href = "tel:+94777897901")}
               >
                 Schedule a Call
               </Button>
+            </div> */}
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "visible", // Ensures the button is not clipped
+                position: "relative", // Allows us to control child positioning
+                zIndex: 1, // Ensure the parent has a base level
+              }}
+            >
+              {/* Apply Now Button */}
+              <Button
+                size="lg"
+                className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
+                style={{
+                  opacity: 1,
+                  visibility: "visible",
+                  zIndex: 10, // Ensure it's on top of the parent container
+                  position: "relative", // Make sure it's properly positioned inside the flex container
+                }}
+                onClick={() => navigate("/register")}
+              >
+                Apply Now
+              </Button>
 
+              {/* Schedule a Call Button */}
+              <Button
+                size="lg"
+                className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full shadow-xl"
+                style={{ opacity: 1, visibility: "visible" }} // Add this style for visibility
+                onClick={() => navigate("/schedule-call")}
+              >
+                Schedule a Call
+              </Button>
             </div>
           </motion.div>
         </div>
       </section>
-    </div >
+    </div>
   );
 };
