@@ -260,15 +260,38 @@ const ContactPage: React.FC = () => {
 
                     {/* Social Media */}
                     <div className="flex space-x-4 pt-6 border-t border-gray-200/50">
-                      <div className="w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-xl flex items-center justify-center cursor-pointer hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
-                        <Facebook className="w-6 h-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                      </div>
-                      <div className="w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-xl flex items-center justify-center cursor-pointer hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
-                        <Instagram className="w-6 h-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                      </div>
-                      <div className="w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-xl flex items-center justify-center cursor-pointer hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
-                        <Linkedin className="w-6 h-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
-                      </div>
+                      <a 
+                       href="https://www.facebook.com/share/1GdEo1YHuw/?mibextid=wwXIfr" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Facebook"
+                      >
+                       <div className="w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-xl flex items-center justify-center cursor-pointer hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                      <Facebook className="w-6 h-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                       </div>
+                      </a>
+
+                      <a 
+                       href="https://instagram.com/veritasinternationalcampus/p/DGM7D7Ph9tA" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Instagram"
+                      >
+                       <div className="w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-xl flex items-center justify-center cursor-pointer hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                       <Instagram className="w-6 h-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                       </div>
+                      </a>
+
+                       <a 
+                       href="https://linkedin.com/showcase/veritas-international-campus" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn"
+                      >
+                       <div className="w-12 h-12 bg-teal-600 hover:bg-teal-700 text-white rounded-xl flex items-center justify-center cursor-pointer hover:scale-110 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                       <Linkedin className="w-6 h-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300" />
+                       </div>
+                       </a>
                     </div>
                   </div>
                 </div>
